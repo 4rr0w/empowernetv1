@@ -1,0 +1,16 @@
+.button {
+    color: #FFF9FC;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-family: 'Poppins';
+    border: none;
+    font-size: 1em;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
