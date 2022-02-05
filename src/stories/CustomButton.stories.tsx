@@ -3,7 +3,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { MdSearch } from 'react-icons/md';
-import '../App.less';
+import '../App.css';
 
 import { CustomButton, ButtonProps } from '../components/CustomButton';
 
