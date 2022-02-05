@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1130.753" height="1047.458" viewBox="0 0 1130.753 1047.458">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffa7be"/>
+      <stop offset="0.361" stop-color="#faa6c2"/>
+      <stop offset="0.63" stop-color="#d69fd9"/>
+      <stop offset="1" stop-color="#9e93ff"/>
+    </radialGradient>
+  </defs>
+  <path id="Combined_Shape" data-name="Combined Shape" d="M252.114,3.619C21.586-20.942-20.287,83.525,7.59,195.468c34.745,139.52-54.1,203.575,29.6,247.3,86.861,45.379,155.037-186.6,366.876-123.492C717.138,412.544,542.7,34.58,252.114,3.619Z" transform="translate(901.265 660.805) rotate(164)" fill="url(#radial-gradient)"/>
+</svg>

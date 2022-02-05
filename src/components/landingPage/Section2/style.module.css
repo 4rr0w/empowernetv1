@@ -16,8 +16,9 @@
     right: 0;
     max-width: 798px;
     max-height: auto;
-    width: 58.41%;
+    width: 70.41%;
     height: auto;
+    z-index: -1;
 }
 
 .background{
