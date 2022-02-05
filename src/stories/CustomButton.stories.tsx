@@ -10,6 +10,11 @@ import { CustomButton, ButtonProps } from '../components/CustomButton';
 export default {
   title: 'components/CustomButton',
   component: CustomButton,
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
+  },
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => <CustomButton {...args} />;
@@ -27,6 +32,7 @@ Secondary.args = {
   text: 'Sign Up',
   size: 'large',
 };
+
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   prefixIcon: <MdSearch fontSize={27} style={{ marginLeft: '5px' }} />,
@@ -50,4 +56,14 @@ RoundButton.args = {
     height: '60px',
     width: '80px',
   },
+};
+
+export const WithBorder = Template.bind({});
+WithBorder.args = {
+  style: {
+    border: '2px solid #D8D8D8',
+    background: 'transparent 0% 0% no-repeat padding-box',
+  },
+  text: 'Contact Sales',
+  size: 'large',
 };
