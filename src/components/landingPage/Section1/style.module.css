@@ -1,0 +1,56 @@
+.mainSec1{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #07020C;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.topContainer{
+   position: relative;
+   min-width: 100%;
+}
+
+.hiddenTop{
+    visibility: hidden !important;
+    top: 52px;
+    right: 0;
+    max-width: 798px;
+    max-height: auto;
+    width: 58.41%;
+    height: auto;
+}
+
+.graphics{
+    position: absolute;
+    top: 52px;
+    right: 0;
+    max-width: 798px;
+    max-height: auto;
+    width: 58.41%;
+    height: auto;
+}
+
+.girl{
+    position: absolute;
+    float: right;
+    top: 52px;
+    right: 38px;
+    max-width: 721px;
+    max-height: auto;
+    width: 52.7%;
+    height: auto;
+}
+.bottomContainer{
+   position: relative;
+   min-width: 100%;
+}
+
+.rocket{
+    position: absolute;
+    left: -12.18%;
+    max-width: 957px;
+    max-height: auto;
+    width: 70.05%;
+    height: auto;
+}
