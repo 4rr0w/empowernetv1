@@ -3,11 +3,11 @@
     min-height: fit-content;
     background-color: #07020C;
     overflow-x: hidden;
+    padding: 2vw;
 }
 .text{
     text-align: center;
-    font-size: max(2.4vw, 14px) ;
-    line-height-step: 45;
+    font-size: max(2.4vw, 14px);
     color: #C3BDFF;
 }
 

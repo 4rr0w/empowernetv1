@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="1137.212" viewBox="0 0 1366 1137.212">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.46" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffa7be"/>
+      <stop offset="0.361" stop-color="#faa6c2"/>
+      <stop offset="0.369" stop-color="#d69fd9"/>
+      <stop offset="1" stop-color="#7961f6"/>
+    </radialGradient>
+  </defs>
+  <path id="Bottom_Shadow" data-name="Bottom Shadow" d="M-14.311,0S-240.48,569.615-529.969,743.779C-681.593,835-828.915,835-1211.14,709.536-1282.32,686.17-1379,677.925-1379,677.925v459.286H-13Z" transform="translate(1379)" fill="url(#radial-gradient)"/>
+</svg>
