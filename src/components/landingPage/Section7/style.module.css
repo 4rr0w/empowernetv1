@@ -1,0 +1,18 @@
+.mainSec7{
+    min-width: 100%;
+    min-height: fit-content;
+    background-color: #07020C;
+    overflow-x: hidden;
+}
+.text{
+    text-align: center;
+    font-size: max(2.4vw, 14px) ;
+    line-height-step: 45;
+    color: #C3BDFF;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
