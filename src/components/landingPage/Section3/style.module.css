@@ -84,9 +84,9 @@
 
 .cshape{
     position: absolute;
-    top: 70vw;
-    right: -13vw;
-    max-width: 1000px;
+    top: 75.5vw;
+    right: -9vw;
+    max-width: 1050px;
     max-height: auto;
     width: 82%;
     height: auto;
@@ -97,8 +97,8 @@
 .cshapeHidden{
     /* visibility: hidden; */
     top: -70vw;
-    right: -14vw;
-    max-width: 1000px;
+    right: -9vw;
+    max-width: 1050px;
     max-height: auto;
     width: 80%;
     height: auto;
@@ -108,10 +108,64 @@
 
 .window{
     position: absolute;
-    top: 82vw;
-    right: 7vw;
+    top: 88vw;
+    right: 11vw;
     max-width: 528px;
     max-height: auto;
-    width: 38%;
+    width: 37.5%;
+    height: auto;
+}
+
+.languageContainer{
+    position: relative;
+    min-width: 100%;
+}
+
+.cshape1{
+    position: absolute;
+    top: 125vw;
+    left: 4.5vw;
+    max-width: 650px;
+    max-height: auto;
+    width: 67%;
+    height: auto;
+    opacity: 0.94;
+    filter: blur(2.5vw);
+}
+
+.ftfwindow{
+    position: absolute;
+    top: 134.5vw;
+    left: 11vw;
+    max-width: 486px;
+    max-height: auto;
+    width: 34%;
+    height: auto;
+}
+
+.reliableContainer{
+    position: relative;
+    min-width: 100%;
+}
+
+.cshape2{
+    position: absolute;
+    top: 158vw;
+    right: -7vw;
+    max-width: 650px;
+    max-height: auto;
+    width: 80%;
+    height: auto;
+    opacity: 0.94;
+    filter: blur(2.5vw);
+}
+
+.infowindow{
+    position: absolute;
+    top: 177vw;
+    right: 19vw;
+    max-width: 550px;
+    max-height: auto;
+    width: 40.2%;
     height: auto;
 }

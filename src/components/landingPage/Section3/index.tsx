@@ -32,6 +32,14 @@ export const Section3: React.FC<Section3Props> = () => {
         <img className={styles.window} alt="" src={Group51960} />
         {/* <img className={styles.cshapeHidden} alt="" src={cshape} /> */}
       </div>
+      <div className={styles.languageContainer}>
+        <img className={styles.cshape1} alt="" src={cshape1} />
+        <img className={styles.ftfwindow} alt="" src={Group51958} />
+      </div>
+      <div className={styles.reliableContainer}>
+        <img className={styles.cshape2} alt="" src={cshape2} />
+        <img className={styles.infowindow} alt="" src={Group51962} />
+      </div>
     </div>
   );
 };
