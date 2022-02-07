@@ -52,3 +52,66 @@
     width: 24.5%;
     height: auto;
 }
+
+.mentorsContainer{
+    position: relative;
+    min-width: 100%;
+}
+
+.group{
+    position: absolute;
+    top: 40vw;
+    left: 0;
+    max-width: 1003px;
+    max-height: auto;
+    width: 73.4%;
+    height: auto;
+}
+.groupHidden{
+    visibility: hidden;
+    top: -10%;
+    left: 0;
+    max-width: 1003px;
+    max-height: auto;
+    width: 73.4%;
+    height: auto;
+}
+
+.directSupportContainer{
+    position: relative;
+    min-width: 100%;
+}
+
+.cshape{
+    position: absolute;
+    top: 70vw;
+    right: -13vw;
+    max-width: 1000px;
+    max-height: auto;
+    width: 82%;
+    height: auto;
+    opacity: 0.94;
+    filter: blur(2.5vw);
+}
+
+.cshapeHidden{
+    /* visibility: hidden; */
+    top: -70vw;
+    right: -14vw;
+    max-width: 1000px;
+    max-height: auto;
+    width: 80%;
+    height: auto;
+    opacity: 0.94;
+    filter: blur(2vw);
+}
+
+.window{
+    position: absolute;
+    top: 82vw;
+    right: 7vw;
+    max-width: 528px;
+    max-height: auto;
+    width: 38%;
+    height: auto;
+}

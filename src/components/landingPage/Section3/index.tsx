@@ -21,7 +21,16 @@ export const Section3: React.FC<Section3Props> = () => {
         <img className={styles.cshape3} alt="" src={cshape3} />
         <img className={styles.skills} alt="" src={Group51958} />
         <img className={styles.girl} alt="" src={Group51906} />
-        <img className={styles.cshape3Hidden} alt="" src={cshape3} />
+        {/* <img className={styles.cshape3Hidden} alt="" src={cshape3} /> */}
+      </div>
+      <div className={styles.mentorsContainer}>
+        <img className={styles.group} alt="" src={Group51931} />
+        {/* <img className={styles.groupHidden} alt="" src={Group51931} /> */}
+      </div>
+      <div className={styles.directSupportContainer}>
+        <img className={styles.cshape} alt="" src={cshape} />
+        <img className={styles.window} alt="" src={Group51960} />
+        {/* <img className={styles.cshapeHidden} alt="" src={cshape} /> */}
       </div>
     </div>
   );
