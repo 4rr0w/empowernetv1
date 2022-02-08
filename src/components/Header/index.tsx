@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
+import { MenuOutlined } from '@ant-design/icons';
 import { CustomButton } from '../CustomButton';
 import styles from './style.module.css';
 import logoFull from '../../assets/logo/full-logo.svg';
@@ -10,6 +11,7 @@ export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
   const { width } = useWindowDimensions();
+  const [showMenu, setShowMenu] = useState(false);
   const links: { [key: string]: string } = {
     'Find Mentor': '/',
     Resources: '/resources',
@@ -26,21 +28,14 @@ export const Header: React.FC<HeaderProps> = () => {
       </>
     );
   };
-  return (
-    <div className={styles.headerContainer}>
-      <div className={styles.container}>
-        <img
-          className={styles.logo}
-          src={width <= 900 ? logo : logoFull}
-          alt=""
-        />
-        <div className={styles.headerLinks}>
-          {Object.keys(links).map((key) => (
-            <div className={styles.link}>{key}</div>
-          ))}
-        </div>
-      </div>
 
+  const headerContent = (
+    <div className={styles.container}>
+      <div className={styles.headerLinks}>
+        {Object.keys(links).map((key) => (
+          <div className={styles.link}>{key}</div>
+        ))}
+      </div>
       <div className={styles.buttons}>
         <CustomButton onClick={() => {}} size="middle" text="Book a Demo" />
         <CustomButton
@@ -51,5 +46,22 @@ export const Header: React.FC<HeaderProps> = () => {
         />
       </div>
     </div>
+  );
+  return (
+    <>
+      <div className={styles.headerContainer}>
+        <img className={styles.logo} src={logoFull} alt="" />
+
+        {width <= 900 ? (
+          <MenuOutlined
+            className={styles.menuButton}
+            onClick={() => setShowMenu(!showMenu)}
+          />
+        ) : (
+          headerContent
+        )}
+      </div>
+      {showMenu && headerContent}
+    </>
   );
 };

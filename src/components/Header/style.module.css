@@ -6,17 +6,19 @@
     justify-content: space-between;
 }
 
+
+.logo{
+    max-width: 225px;
+    min-width: 130px;
+    max-height: auto;
+    width: 16vw;
+    height: auto;
+}
+
 .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo{
-    max-width: 225px;
-    max-height: auto;
-    width: 16vw;
-    height: auto;
 }
 
 .headerLinks{
@@ -42,11 +44,25 @@
     margin: 5px;
 }
 
+.menuButton{
+    font-size: max(1.6vw, 18px);
+}
+
 @media only screen and (max-width: 900px) {
-    .logo{
+    /* .logo{
         margin-top: -10px;
         max-width: 60px;
         width: 5vw;
         min-width: 45px;
+    } */
+
+    .container{
+        flex-direction: column;
+    }
+    .headerLinks{
+        flex-direction: column;
+    }
+    .buttons{
+        flex-direction: column;
     }
   }
