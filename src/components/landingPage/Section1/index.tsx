@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdSearch } from 'react-icons/md';
+import { MdArrowRight, MdSearch } from 'react-icons/md';
 import styles from './style.module.css';
 import Group51957 from '../../../assets/landingPage/Section1/Group 51957.png';
 import Group51855 from '../../../assets/landingPage/Section1/Group 51855.png';
@@ -40,7 +40,6 @@ export const Section1: React.FC<Section1Props> = () => {
             onClick={() => {}}
             prefixIcon={
               <MdSearch
-                fontSize={27}
                 style={{ marginLeft: '5px', fontSize: 'min(3vw, 34px)' }}
               />
             }
@@ -65,8 +64,81 @@ export const Section1: React.FC<Section1Props> = () => {
           })}
         </div>
       </div>
-      <div className={styles.bottomContainer}>
-        <img className={styles.rocket} alt="" src={Group51941} />
+      <img className={styles.rocket} alt="" src={Group51941} />
+      <div className={styles.mentorship}>
+        <p className={styles.mentorshipHeading}>
+          Mentorship made{' '}
+          <span
+            style={{
+              color: '#EC9CAE',
+            }}
+          >
+            simple
+          </span>
+          .
+        </p>
+        <p className={styles.mentorshipIntro}>
+          Empowering young women with the
+          <span
+            style={{
+              color: '#8F74FF',
+            }}
+          >
+            {' '}
+            guidance
+          </span>
+          ,
+          <span
+            style={{
+              color: '#F7DB42',
+            }}
+          >
+            {' '}
+            support{' '}
+          </span>
+          and
+          <span
+            style={{
+              color: '#EC9CAE',
+            }}
+          >
+            {' '}
+            motivation{' '}
+          </span>
+          necessary to progress through their education and career and move
+          towards realising their{' '}
+          <span
+            style={{
+              color: '#7E60FF',
+            }}
+          >
+            {' '}
+            full potential{' '}
+          </span>
+          .
+        </p>
+        <p className={styles.mentorshipIntro2}>
+          We believe that young women should not be excluded from real
+          life-changing opportunities simply because their{' '}
+          <span
+            style={{
+              color: '#EC9CAE',
+            }}
+          >
+            quantitative fluency
+          </span>
+          is invisible.
+        </p>
+        <div className={styles.buttons}>
+          <CustomButton text="Get Started" icon={<MdArrowRight />} iconRight />
+          <CustomButton
+            style={{
+              background: 'transparent 0% 0% no-repeat padding-box',
+              border: '2px solid #D8D8D8',
+            }}
+            text="Contact Sales"
+          />
+        </div>
       </div>
     </div>
   );

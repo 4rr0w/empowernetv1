@@ -1,6 +1,6 @@
 .mainSec1 {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: fit-content;
   background-color: #07020c;
   overflow-x: hidden;
 }
@@ -55,11 +55,13 @@
 }
 
 .tags {
+  position: relative;
   display: flex;
   margin-top: min(30px, 2vw);
 }
 
 .tag {
+  position: relative;
   margin-right: min(15px, 1vw);
   height: max(4vw, 18px) !important;
   padding: 1vw 1.2vw !important;
@@ -88,16 +90,53 @@
   width: 52.7%;
   height: auto;
 }
+
 .bottomContainer {
   position: relative;
   min-width: 100%;
+  margin-top: 0;
 }
 
 .rocket {
-  position: absolute;
-  left: -12.18%;
+  /* position: absolute; */
+  margin-top: -15vw;
+  margin-left: -15%;
   max-width: 957px;
   max-height: auto;
   width: 70.05%;
   height: auto;
+}
+
+.mentorship {
+  margin-top: -43vw;
+  color: #ffffff;
+  margin-left: 46vw;
+  margin-right: 3vw;
+}
+
+.mentorshipHeading {
+  font-size: min(3.6vw, 50px);
+}
+
+.mentorshipIntro {
+  font-size: min(1.5vw, 21px);
+  line-height: 1.36;
+}
+
+.mentorshipIntro2 {
+  color: #bfbfbf;
+  font-size: min(1.46vw, 20px);
+  line-height: 1.26;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons > * {
+  margin-right: 1.46vw;
+  height: max(4vw, 18px) !important;
+  padding: 1vw 1.2vw !important;
+  font-size: min(2vw, 24px);
 }
