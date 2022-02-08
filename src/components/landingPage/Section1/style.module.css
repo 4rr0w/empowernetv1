@@ -1,55 +1,89 @@
-.mainSec1{
-    min-width: 100vw;
-    min-height: 100vh;
-    background-color: #07020C;
-    overflow-x: hidden;
+.mainSec1 {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #07020c;
+  overflow-x: hidden;
 }
 
-.topContainer{
-   position: relative;
-   min-width: 100%;
+.topContainer {
+  position: relative;
+  min-width: 100%;
+  padding-left: 10vw;
+  margin-bottom: 40px;
 }
 
-.hiddenTop{
-    visibility: hidden !important;
-    top: 52px;
-    right: 0;
-    max-width: 798px;
-    max-height: auto;
-    width: 58.41%;
-    height: auto;
+.empowernet {
+  position: relative;
+  font-size: min(7.2vw, 100px);
+  color: #8366fe;
+  padding-top: 5vw;
+  font-weight: bolder;
 }
 
-.graphics{
-    position: absolute;
-    top: 52px;
-    right: 0;
-    max-width: 798px;
-    max-height: auto;
-    width: 58.41%;
-    height: auto;
+.subheading {
+  position: relative;
+  font-size: min(5vw, 80px);
+  color: #ffffff;
+  margin-top: -6vw;
 }
 
-.girl{
-    position: absolute;
-    float: right;
-    top: 52px;
-    right: 38px;
-    max-width: 721px;
-    max-height: auto;
-    width: 52.7%;
-    height: auto;
-}
-.bottomContainer{
-   position: relative;
-   min-width: 100%;
+.inputContainer {
+  margin-top: 10px;
+  position: relative;
+  width: fit-content;
+  font-size: max(6px, min(1.53vw, 21px));
+  height: max(4vw, 18px);
 }
 
-.rocket{
-    position: absolute;
-    left: -12.18%;
-    max-width: 957px;
-    max-height: auto;
-    width: 70.05%;
-    height: auto;
+.searchInput {
+  position: relative;
+  border: none;
+  outline: none;
+  padding: min(0.8vw, 10px);
+  border-radius: 1.317vw;
+  height: max(4vw, 18px);
+  width: 52.5vw;
+}
+
+.findButton {
+  position: absolute;
+  right: 0;
+  height: max(4vw, 18px) !important;
+  padding: 1vw 1.2vw !important;
+  font-size: min(2vw, 24px);
+  cursor: pointer;
+}
+
+.graphics {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 798px;
+  max-height: auto;
+  width: 58.41%;
+  height: auto;
+}
+
+.girl {
+  position: absolute;
+  float: right;
+  top: 0;
+  right: 38px;
+  max-width: 721px;
+  max-height: auto;
+  width: 52.7%;
+  height: auto;
+}
+.bottomContainer {
+  position: relative;
+  min-width: 100%;
+}
+
+.rocket {
+  position: absolute;
+  left: -12.18%;
+  max-width: 957px;
+  max-height: auto;
+  width: 70.05%;
+  height: auto;
 }
