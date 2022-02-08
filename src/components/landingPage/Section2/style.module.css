@@ -1,43 +1,109 @@
-.mainSec2{
-    min-width: 100vw;
-    min-height: 100vh;
-    background-color: #07020C;
-    overflow-x: hidden;
+.mainSec2 {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #07020c;
+  overflow-x: hidden;
 }
 
-.container{
-   position: relative;
-   min-width: 100%;
+.container {
+  position: relative;
+  min-width: 100%;
+  padding-left: 10vw;
 }
 
-.backgroundHidden{
-    visibility: hidden !important;
-    top: 0px;
-    right: 0;
-    max-width: 798px;
-    max-height: auto;
-    width: 70.41%;
-    height: auto;
-    z-index: -1;
+.backgroundHidden {
+  visibility: hidden !important;
+  top: 0px;
+  right: 0;
+  max-width: 798px;
+  max-height: auto;
+  width: 70.41%;
+  height: auto;
+  z-index: -1;
 }
 
-.background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    max-height: auto;
-    width: 100%;
-    height: auto;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: auto;
+  width: 100%;
+  height: auto;
 }
 
-.laptop{
-    position: absolute;
-    float: right;
-    top: 27.08%;
-    right: 0;
-    max-width: 722px;
-    max-height: auto;
-    width: 52.85%;
-    height: auto;
+.laptop {
+  position: absolute;
+  float: right;
+  top: 27.08%;
+  right: 0;
+  max-width: 722px;
+  max-height: auto;
+  width: 52.85%;
+  height: auto;
+}
+
+.aboutPlatform {
+  position: relative;
+  margin-top: -48vw;
+  width: 35vw;
+  color: #ffffff;
+  position: relative;
+  color: #fff;
+}
+
+.heading {
+  font-size: min(3.6vw, 50px);
+}
+
+.about {
+  font-size: min(1.8vw, 24px);
+  line-height: 1.4;
+}
+
+.button {
+  height: max(4vw, 18px) !important;
+  padding: min(1vw, 8px) min(4vw, 50px) !important;
+  font-size: min(2vw, 24px);
+  box-shadow: 0 10 #5835a775;
+}
+
+.listContainer {
+  margin-top: 30vw;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  max-width: 50px;
+  width: 3.6vw;
+  min-width: 40px;
+  max-height: auto;
+  height: auto;
+}
+
+.heading2 {
+  margin-top: 2vw;
+  font-size: min(2.7vw, 37px);
+}
+
+.list {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list > span {
+  width: 20.4vw;
+  font-size: min(1.5vw, 14px);
+  min-width: fit-content;
+  text-align: center;
+}
+
+.list > span:hover {
+  color: #9169db;
 }
