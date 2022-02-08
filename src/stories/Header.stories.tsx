@@ -1,22 +1,16 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Header } from './Header';
+import { Story, Meta } from '@storybook/react';
+import '../App.css';
+import { Header, HeaderProps } from '../components/Header';
 
 export default {
-  title: 'Example/Header',
+  title: 'components/Header',
   component: Header,
-} as ComponentMeta<typeof Header>;
+} as Meta;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: Story<HeaderProps> = (args) => <Header {...args} />;
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {},
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};

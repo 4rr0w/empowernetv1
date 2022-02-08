@@ -1,0 +1,52 @@
+.headerContainer{
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    max-width: 225px;
+    max-height: auto;
+    width: 16vw;
+    height: auto;
+}
+
+.headerLinks{
+    display: flex;
+    margin: 0 20px;
+    justify-content: space-between;
+    font-size: max(1.5vw, 14px);
+}
+
+.link{
+    margin: 10px;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    min-width: fit-content;
+    align-items: center;
+}
+
+.buttons > *{
+    margin: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+    .logo{
+        margin-top: -10px;
+        max-width: 60px;
+        width: 5vw;
+        min-width: 45px;
+    }
+  }
