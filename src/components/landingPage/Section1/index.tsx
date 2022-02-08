@@ -9,6 +9,13 @@ import { CustomButton } from '../../CustomButton';
 export interface Section1Props {}
 
 export const Section1: React.FC<Section1Props> = () => {
+  const tags: { [key: string]: string[] } = {
+    Mathematics: ['#7E60FF', '/path'],
+    CS: ['#8BC5FF', '/path'],
+    Engineering: ['#F7DB42', '/path'],
+    'Machine Learning': ['#EC9CAE', '/path'],
+  };
+
   return (
     <div className={styles.mainSec1}>
       <div className={styles.topContainer}>
@@ -43,6 +50,19 @@ export const Section1: React.FC<Section1Props> = () => {
             }}
             text="Find Mentor"
           />
+        </div>
+        <div className={styles.tags}>
+          {Object.keys(tags).map((tag) => {
+            return (
+              <CustomButton
+                className={styles.tag}
+                onClick={() => {}}
+                size="middle"
+                text={tag}
+                gradient={[tags[tag][0], tags[tag][0]]}
+              />
+            );
+          })}
         </div>
       </div>
       <div className={styles.bottomContainer}>
