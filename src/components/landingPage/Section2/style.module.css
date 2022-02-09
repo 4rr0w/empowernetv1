@@ -1,8 +1,9 @@
 .mainSec2 {
   min-width: 100vw;
-  min-height: 100vh;
+  height: fit-content;
   background-color: #07020c;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
 }
 
 .container {

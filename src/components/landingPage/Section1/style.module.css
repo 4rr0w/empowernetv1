@@ -1,8 +1,8 @@
 .mainSec1 {
   min-width: 100vw;
-  min-height: fit-content;
+  height: fit-content;
   background-color: #07020c;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .topContainer {
@@ -112,6 +112,7 @@
   color: #ffffff;
   margin-left: 46vw;
   margin-right: 3vw;
+  margin-bottom: 12vw;
 }
 
 .mentorshipHeading {
