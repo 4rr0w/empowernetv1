@@ -1,171 +1,206 @@
-.mainSec3{
-    min-width: 100vw;
-    min-height: 100vh;
-    background-color: #07020C;
-    overflow-x: hidden;
+.mainSec3 {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #07020c;
+  overflow: hidden;
+  color: #ffffff;
+  padding-bottom: 20vw;
 }
 
-.skillsContainer{
-   position: relative;
-   min-width: 100%;
+.skillsContainer {
+  position: relative;
+  min-width: 100%;
 }
 
-.cshape3Hidden{
-    visibility: hidden !important;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    max-height: auto;
-    width: 100%;
-    height: auto;
+.cshape3Hidden {
+  visibility: hidden !important;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: auto;
+  width: 100%;
+  height: auto;
 }
 
-.cshape3{
-    position: absolute;
-    top: 2vw;
-    right: 1vw;
-    max-width: 1446px;
-    max-height: auto;
-    width: 69.5vw;
-    height: auto;
-    /* transform: matrix(-0.96, 0.28, -0.28, -0.96, 0, 0); */
-    opacity: 0.94;
-    filter: blur(2vw);
+.cshape3 {
+  position: absolute;
+  top: 2vw;
+  right: 1vw;
+  max-width: 1446px;
+  max-height: auto;
+  width: 69.5vw;
+  height: auto;
+  /* transform: matrix(-0.96, 0.28, -0.28, -0.96, 0, 0); */
+  opacity: 0.94;
+  filter: blur(2vw);
 }
 
-.skills{
-    position: absolute;
-    top: 18.73vw;
-    right: 12.68%;
-    max-width: 505px;
-    max-height: auto;
-    width: 32%;
-    height: auto;
+.skills {
+  position: absolute;
+  top: 18.73vw;
+  right: 12.68%;
+  max-width: 505px;
+  max-height: auto;
+  width: 32%;
+  height: auto;
 }
 
-.girl{
-    position: absolute;
-    top: 35.4vw;
-    right: 30.35%;
-    max-width: 335px;
-    max-height: auto;
-    width: 24.5%;
-    height: auto;
+.girl {
+  position: absolute;
+  top: 35.4vw;
+  right: 30.35%;
+  max-width: 335px;
+  max-height: auto;
+  width: 24.5%;
+  height: auto;
 }
 
-.mentorsContainer{
-    position: relative;
-    min-width: 100%;
+.mentorsContainer {
+  position: relative;
+  min-width: 100%;
 }
 
-.group{
-    position: absolute;
-    top: 40vw;
-    left: 0;
-    max-width: 1003px;
-    max-height: auto;
-    width: 73.4%;
-    height: auto;
-}
-.groupHidden{
-    visibility: hidden;
-    top: -10%;
-    left: 0;
-    max-width: 1003px;
-    max-height: auto;
-    width: 73.4%;
-    height: auto;
+.group {
+  position: absolute;
+  top: -16vw;
+  left: 0;
+  max-width: 1003px;
+  max-height: auto;
+  width: 73.4%;
+  height: auto;
 }
 
-.directSupportContainer{
-    position: relative;
-    min-width: 100%;
+.directSupportContainer {
+  position: relative;
+  min-width: 100%;
 }
 
-.cshape{
-    position: absolute;
-    top: 75.5vw;
-    right: -9vw;
-    max-width: 1050px;
-    max-height: auto;
-    width: 82%;
-    height: auto;
-    opacity: 0.94;
-    filter: blur(2.5vw);
+.cshape {
+  position: absolute;
+  top: -20vw;
+  right: -9vw;
+  max-width: 1050px;
+  max-height: auto;
+  width: 82%;
+  height: auto;
+  opacity: 0.94;
+  filter: blur(2.5vw);
 }
 
-.cshapeHidden{
-    /* visibility: hidden; */
-    top: -70vw;
-    right: -9vw;
-    max-width: 1050px;
-    max-height: auto;
-    width: 80%;
-    height: auto;
-    opacity: 0.94;
-    filter: blur(2vw);
+.window {
+  position: absolute;
+  top: -8vw;
+  right: 11vw;
+  max-width: 500px;
+  max-height: auto;
+  width: 37.5%;
+  height: auto;
 }
 
-.window{
-    position: absolute;
-    top: 88vw;
-    right: 11vw;
-    max-width: 528px;
-    max-height: auto;
-    width: 37.5%;
-    height: auto;
+.languageContainer {
+  position: relative;
+  min-width: 100%;
 }
 
-.languageContainer{
-    position: relative;
-    min-width: 100%;
+.cshape1 {
+  position: absolute;
+  top: -12vw;
+  left: 4.5vw;
+  max-width: 800px;
+  max-height: auto;
+  width: 67%;
+  height: auto;
+  opacity: 0.94;
+  filter: blur(2.5vw);
 }
 
-.cshape1{
-    position: absolute;
-    top: 125vw;
-    left: 4.5vw;
-    max-width: 650px;
-    max-height: auto;
-    width: 67%;
-    height: auto;
-    opacity: 0.94;
-    filter: blur(2.5vw);
+.ftfwindow {
+  position: absolute;
+  top: -0vw;
+  left: 12vw;
+  max-width: 360px;
+  max-height: auto;
+  width: 34%;
+  height: auto;
 }
 
-.ftfwindow{
-    position: absolute;
-    top: 134.5vw;
-    left: 11vw;
-    max-width: 486px;
-    max-height: auto;
-    width: 34%;
-    height: auto;
+.reliableContainer {
+  position: relative;
+  min-width: 100%;
 }
 
-.reliableContainer{
-    position: relative;
-    min-width: 100%;
+.cshape2 {
+  position: absolute;
+  top: -20vw;
+  right: -7vw;
+  max-width: 650px;
+  max-height: auto;
+  width: 80%;
+  height: auto;
+  opacity: 0.94;
+  filter: blur(2.5vw);
 }
 
-.cshape2{
-    position: absolute;
-    top: 158vw;
-    right: -7vw;
-    max-width: 650px;
-    max-height: auto;
-    width: 80%;
-    height: auto;
-    opacity: 0.94;
-    filter: blur(2.5vw);
+.infowindow {
+  position: absolute;
+  top: -1vw;
+  right: 19vw;
+  max-width: 550px;
+  max-height: auto;
+  width: 40.2%;
+  height: auto;
 }
 
-.infowindow{
-    position: absolute;
-    top: 177vw;
-    right: 19vw;
-    max-width: 550px;
-    max-height: auto;
-    width: 40.2%;
-    height: auto;
+.heading {
+  position: relative;
+  color: #8366fe;
+  font-size: min(4.39vw, 60px);
+  left: 10vw;
+  top: 8vw;
+}
+
+.skillsText {
+  position: relative;
+  margin-top: 16vw;
+  margin-left: 10vw;
+  width: 24.23vw;
+}
+
+.mentorsText {
+  position: relative;
+  width: 24.23vw;
+  margin-left: 64.7vw;
+  margin-top: 23vw;
+}
+
+.directSupportText {
+  position: relative;
+  width: 24.23vw;
+  margin-left: 10vw;
+  margin-top: 25vw;
+}
+
+.languageText {
+  position: relative;
+  width: 24.23vw;
+  margin-left: 64.7vw;
+  margin-top: 14vw;
+}
+
+.reliableText {
+  position: relative;
+  margin-top: 22vw;
+  margin-left: 10vw;
+  width: 24.23vw;
+}
+
+.subheading {
+  font-size: min(2.2vw, 31px);
+  line-height: 1.46;
+}
+
+.para {
+  font-size: min(1.537vw, 21px);
+  margin-top: 0.8vw;
+  line-height: 1.31;
 }
