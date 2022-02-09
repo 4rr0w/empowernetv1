@@ -4,6 +4,7 @@
   background-color: #07020c;
   overflow: hidden;
   display: block;
+  padding-bottom: 10vw;
 }
 
 .container {
@@ -31,6 +32,7 @@
   max-height: auto;
   width: 100%;
   height: auto;
+  max-height: 1100px;
 }
 
 .laptop {
