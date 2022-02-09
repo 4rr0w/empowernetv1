@@ -58,6 +58,7 @@ export const Header: React.FC<HeaderProps> = () => {
       </div>
     </div>
   );
+  console.log(width);
 
   return (
     <div className={styles.headerContainer}>
