@@ -1,68 +1,96 @@
-.headerContainer{
-    position: sticky;
-    top:0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.headerContainer {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff !important;
+  width: 100vw;
+  padding: 2vw;
+  height: min-content;
 }
 
-
-.logo{
-    max-width: 225px;
-    min-width: 130px;
-    max-height: auto;
-    width: 16vw;
-    height: auto;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo {
+  max-width: 225px;
+  min-width: 130px;
+  max-height: auto;
+  width: 16vw;
+  height: auto;
 }
 
-.headerLinks{
-    display: flex;
-    margin: 0 20px;
-    justify-content: space-between;
-    font-size: max(1.5vw, 14px);
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.link{
-    margin: 10px;
-    text-align: center;
+.containerPhone {
+  height: 0;
 }
 
-.buttons{
-    display: flex;
-    justify-content: space-between;
-    min-width: fit-content;
-    align-items: center;
+.headerLinks {
+  display: flex;
+  margin: 0 20px;
+  justify-content: space-between;
+  font-size: max(1.5vw, 14px);
 }
 
-.buttons > *{
-    margin: 5px;
+.link {
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
 }
 
-.menuButton{
-    font-size: max(1.6vw, 18px);
+.link:hover {
+  color: #9169db;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  min-width: fit-content;
+  align-items: center;
+}
+
+.buttons > * {
+  margin: 5px;
+}
+
+.menuButton {
+  font-size: max(1.6vw, 18px);
 }
 
 @media only screen and (max-width: 900px) {
-    /* .logo{
+  /* .logo{
         margin-top: -10px;
         max-width: 60px;
         width: 5vw;
         min-width: 45px;
     } */
 
-    .container{
-        flex-direction: column;
-    }
-    .headerLinks{
-        flex-direction: column;
-    }
-    .buttons{
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+    margin-top: -2vw;
+    color: #fff;
+    width: 100vw;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.3vw);
   }
+  .headerLinks {
+    flex-direction: column;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+}
