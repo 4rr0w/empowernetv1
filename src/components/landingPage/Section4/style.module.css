@@ -1,0 +1,105 @@
+.mainSec4 {
+  min-width: 100%;
+  min-height: fit-content;
+  background-color: #07020c;
+  overflow: hidden;
+  color: #ffffff;
+  padding-bottom: 20vw;
+  padding-left: 10vw;
+}
+
+.heading {
+  font-size: min(5.49vw, 75px);
+  line-height: 1.2;
+}
+
+.container {
+  display: flex;
+}
+
+.timeline {
+  position: relative;
+  width: fit-content;
+  margin-top: 10vw;
+}
+
+.bar {
+  max-width: 14px;
+  width: 1.024vw;
+  height: auto;
+  max-height: 1868px;
+}
+
+.bead {
+  position: absolute;
+  transform: translate(-61%, 0);
+  max-width: 50px;
+  width: 3.6vw;
+  height: auto;
+}
+
+.content {
+  margin-left: 6.25vw;
+}
+
+.contentContainer {
+  margin-top: 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contentHeading {
+  line-height: 1.46;
+  font-size: min(31px, 2.26vw);
+}
+
+.contentPara {
+  width: 25.84vw;
+  margin-top: 1vw;
+  font-size: min(21px, 1.537vw);
+  line-height: 1.31;
+}
+
+.registerImg {
+  width: 27.89vw;
+  max-width: 381px;
+  height: auto;
+}
+
+.empowerImg {
+  width: 36.6vw;
+  max-width: 500px;
+  height: auto;
+}
+
+.supportImg {
+  margin-top: -12vw;
+  margin-left: -5vw;
+  width: 50vw;
+  max-width: 684px;
+  height: auto;
+}
+
+.organiseImg {
+  width: 27.15vw;
+  max-width: 375px;
+  height: auto;
+}
+
+.b1 {
+  margin-top: 5vw;
+}
+
+.b2 {
+  margin-top: 40vw;
+}
+
+.b3 {
+  margin-top: 80vw;
+}
+
+.b4 {
+  margin-top: 120vw;
+}
