@@ -1,0 +1,11 @@
+.inputContainer {
+  border: solid 0.5px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 3px;
+  width: 100%;
+  display: flex;
+}
+.input {
+  border-radius: 3px;
+  padding: 9px 16px;
+  height: fit-content;
+}
