@@ -1,6 +1,6 @@
 import { Input, InputProps as AntInputProps } from 'antd';
 import { SizeType } from 'antd/lib/config-provider/SizeContext';
-import React, { CSSProperties, ReactNode } from 'react';
+import React, { CSSProperties } from 'react';
 import classnames from 'classnames';
 import styles from './style.module.css';
 
@@ -17,7 +17,6 @@ export interface InputProps extends AntInputProps {
   rows?: number;
   containerStyle?: CSSProperties;
   onMultilineChange?: any;
-  icon?: ReactNode;
 }
 
 export const CustomInput: React.FC<InputProps> = ({
@@ -32,12 +31,10 @@ export const CustomInput: React.FC<InputProps> = ({
   rows = 2,
   multiline = false,
   onMultilineChange,
-  icon,
   ...props
 }) => {
   return (
     <div className={styles.inputContainer} style={containerStyle}>
-      {icon}
       {multiline ? (
         <TextArea
           autoSize={{ minRows: rows, maxRows: 5 }}

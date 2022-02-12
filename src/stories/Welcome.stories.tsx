@@ -3,16 +3,14 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
-import { CustomInput, InputProps } from '../components/CustomInput';
+import { WelcomePage, WelcomePageProps } from '../screens/SignUp/WelcomePage';
 
 export default {
-  title: 'components/CustomInput',
-  component: CustomInput,
+  title: 'components/WelcomePage',
+  component: WelcomePage,
 } as Meta;
 
-const Template: Story<InputProps> = (args) => <CustomInput {...args} />;
+const Template: Story<WelcomePageProps> = (args) => <WelcomePage {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  placeholder: 'Placeholder',
-};
+Primary.args = {};

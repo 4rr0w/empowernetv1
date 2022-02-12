@@ -3,16 +3,14 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
-import { CustomInput, InputProps } from '../components/CustomInput';
+import { Section5, Section5Props } from '../components/landingPage/Section5';
 
 export default {
-  title: 'components/CustomInput',
-  component: CustomInput,
+  title: 'components/Section5',
+  component: Section5,
 } as Meta;
 
-const Template: Story<InputProps> = (args) => <CustomInput {...args} />;
+const Template: Story<Section5Props> = (args) => <Section5 {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  placeholder: 'Placeholder',
-};
+Primary.args = {};
