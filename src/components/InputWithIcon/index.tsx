@@ -33,7 +33,7 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
         ...containerStyle,
         borderLeft: `min(0.5vw, 6px) solid ${
           focused ? onFocusColor : iconColor
-        } `,
+        }`,
         backgroundColor,
       }}
     >

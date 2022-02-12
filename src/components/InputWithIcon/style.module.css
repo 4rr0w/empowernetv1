@@ -10,10 +10,8 @@
   margin-left: 1vw;
   border: none;
   outline: none;
+  font-weight: 100 !important;
   background-color: transparent !important;
-}
-
-.iconContainer {
 }
 
 ::placeholder {
