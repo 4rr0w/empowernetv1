@@ -14,15 +14,17 @@ export const WelcomePage: React.FC<WelcomePageProps> = () => {
           We have set this up to give you a space to explore and play with our
           community platform.
         </span>
-
-        <InputWithIcon
-          className={styles.input}
-          icon={
-            <MdOutlineMailOutline style={{ fontSize: 'min(25px, 3.6vw)' }} />
-          }
-          onFocusColor="rgba(255, 215, 20, 1)"
-          placeholder="Email"
-        />
+        <div className={styles.inputContainer}>
+          <InputWithIcon
+            className={styles.input}
+            icon={
+              <MdOutlineMailOutline style={{ fontSize: 'min(25px, 4vw)' }} />
+            }
+            onFocusColor="rgba(255, 215, 20, 1)"
+            placeholder="Email Address"
+          />
+          <div className={styles.box} />
+        </div>
       </div>
     </div>
   );
