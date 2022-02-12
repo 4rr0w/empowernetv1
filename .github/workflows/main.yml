@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - production
+      - gh-pages
 name: 🚀 Deploy Procuction
 jobs:
   FTP-Deploy-Action:
