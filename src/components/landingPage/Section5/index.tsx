@@ -24,47 +24,48 @@ export const Section5: React.FC<Section5Props> = ({
         that’s switching careers or simply preparing for a personal project, our
         mentors are like having an accountability partner in your pocket.
       </p>
+
       <div className={styles.contentContainer}>
+        <img className={styles.bgimg1} src={Group51938} />
+        <img className={styles.bgimg2} src={Group51940} />
+        <img className={styles.bgimg3} src={Group51956} />
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <img className={styles.mentorimg1} src={Maskgrp30} />
+            <p className={styles.name}>Aditya Singh</p>
+            <p className={styles.info}>Product Manager and Mentor</p>
+          </div>
+          <p className={styles.mentortext}>
+            “ I had several calls with mentees this week, and every single one
+            of them has been insightful, cheerful, uplifting, and full of ideas
+            being exchanged.”
+          </p>
+        </div>
         <div className={styles.container2}>
-          <div>
-            <img className={styles.bgimg1} src={Group51938} />
-            <div className={styles.content}>
-              <img className={styles.mentorimg1} src={Maskgrp30} />
-              <p className={styles.mentortext}>
-                “ I had several calls with mentees this week, and every single
-                one of them has been insightful, cheerful, uplifting, and full
-                of ideas being exchanged.”
-              </p>
-            </div>
-            <p className={styles.name}>Aditya Singh</p>
-            <p className={styles.info}>Product Manager and Mentor</p>
-            <img className={styles.bgimg2} src={Group51940} />
-            <div className={styles.content}>
-              <img className={styles.mentorimg2} src={Maskgrp30} />
-              <p className={styles.mentortext2}>
-                “ I had several calls with mentees this week, and every single
-                one of them has been insightful, cheerful, uplifting, and full
-                of ideas being exchanged.”
-              </p>
-            </div>
+          <div className={styles.text2Container}>
+            <p className={styles.mentortext3}>
+              “ I had several calls with mentees this week, and every single one
+              of them has been insightful, cheerful, uplifting, and full of
+              ideas being exchanged.”
+            </p>
             <p className={styles.name}>Aditya Singh</p>
             <p className={styles.info}>Product Manager and Mentor</p>
           </div>
-          <div className={styles.container3}>
-            {/* <img className={styles.bgimg3} src={Group51956} /> */}
-            <div className={styles.content2}>
-              <p className={styles.mentortext3}>
-                “ I had several calls with mentees this week, and every single
-                one of them has been insightful, cheerful, uplifting, and full
-                of ideas being exchanged.”
-              </p>
-              <img className={styles.mentorimg3} src={Maskgrp32} />
-            </div>
-            <div className={styles.mentor2}>
-              <p className={styles.name2}>Aditya Singh</p>
-              <p className={styles.info2}>Product Manager and Mentor</p>
-            </div>
+          <div className={styles.content2}>
+            <img className={styles.mentorimg3} src={Maskgrp32} />
           </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <img className={styles.mentorimg1} src={Maskgrp30} />
+            <p className={styles.name}>Aditya Singh</p>
+            <p className={styles.info}>Product Manager and Mentor</p>
+          </div>
+          <p className={styles.mentortext}>
+            “ I had several calls with mentees this week, and every single one
+            of them has been insightful, cheerful, uplifting, and full of ideas
+            being exchanged.”
+          </p>
         </div>
       </div>
     </div>
