@@ -48,13 +48,13 @@ export const Section5: React.FC<Section5Props> = ({
    <p className={styles.name2}>Aditya Singh</p>
       <p className={styles.info2}>Product Manager and Mentor</p>
    </div>
-  
+
     </div>
-     
+
         </div>
-      
+
       </div>
-      
+
     </div>
   );
 };
