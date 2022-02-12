@@ -12,10 +12,17 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 2
-        node-version: '14'
+
+    - name: Use Node.js 12
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '16.13.1'
         cache: 'npm'
-    -  run: npm install
-    -  run: npm build
+
+  - name: 🔨 Build Project
+    run: |
+      npm install
+      npm run build
     
     - name: 📂 FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
@@ -23,3 +30,4 @@ jobs:
         server: ftp.empowernetmentoring.com
         username: publisher@empowernetmentoring.com
         password: ${{ secrets.ftp_password }}
+        local-dir: ./dist/
