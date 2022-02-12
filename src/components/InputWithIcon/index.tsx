@@ -9,6 +9,7 @@ export interface InputWithIconProps {
   width?: string;
   containerStyle?: CSSProperties;
   iconColor?: string;
+  onFocusColor?: string;
   icon?: ReactNode;
 }
 
@@ -20,6 +21,7 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
   containerStyle = {},
   iconColor = '#fff',
   icon,
+  onFocusColor = '#fff',
 }) => {
   const [focused, setFocused] = React.useState(false);
   const onFocus = () => setFocused(true);
@@ -29,15 +31,16 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
       className={classnames(styles.inputContainer, className)}
       style={{
         ...containerStyle,
-        borderLeft: `min(0.5vw, 6px) solid ${focused ? iconColor : '#fff'} `,
-        borderColor: iconColor,
+        borderLeft: `min(0.5vw, 6px) solid ${
+          focused ? onFocusColor : iconColor
+        } `,
         backgroundColor,
       }}
     >
       <div
         className={styles.iconContainer}
         style={{
-          color: focused ? iconColor : '#fff',
+          color: focused ? onFocusColor : iconColor,
         }}
       >
         {icon}

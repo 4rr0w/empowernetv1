@@ -3,7 +3,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
-import { MdEmail } from 'react-icons/md';
+import { MdOutlineMailOutline } from 'react-icons/md';
 import { InputWithIcon, InputWithIconProps } from '../components/InputWithIcon';
 
 export default {
@@ -18,13 +18,13 @@ const Template: Story<InputWithIconProps> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   icon: (
-    <MdEmail
+    <MdOutlineMailOutline
       style={{
         fontSize: 'min(25px, 3.6vw)',
       }}
     />
   ),
-  iconColor: 'rgba(255, 215, 20, 1)',
+  onFocusColor: 'rgba(255, 215, 20, 1)',
 
   placeholder: 'Placeholder',
 };

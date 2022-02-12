@@ -9,7 +9,7 @@ export const Section5: React.FC<Section5Props> = ({
 }) => {
   return (
     <div>
-        <h1>Helllooo</h1>
+      <h1>Helllooo</h1>
     </div>
   );
 };
