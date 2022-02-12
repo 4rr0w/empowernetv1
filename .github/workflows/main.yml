@@ -30,4 +30,4 @@ jobs:
         server: ftp.empowernetmentoring.com
         username: publisher@empowernetmentoring.com
         password: ${{ secrets.ftp_password }}
-        local-dir: ./dist/
+        local-dir: ./build/
