@@ -21,7 +21,7 @@ export const WelcomePage: React.FC<WelcomePageProps> = () => {
             <MdOutlineMailOutline style={{ fontSize: 'min(25px, 3.6vw)' }} />
           }
           onFocusColor="rgba(255, 215, 20, 1)"
-          placeholder="Placeholder"
+          placeholder="Email"
         />
       </div>
     </div>
