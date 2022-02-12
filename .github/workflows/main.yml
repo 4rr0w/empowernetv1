@@ -1,14 +1,14 @@
 on: 
   push:
     branches:
-      - gh-pages
+      - production
 name: 🚀 Deploy Procuction
 jobs:
   FTP-Deploy-Action:
     name: 🎉 FTP Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: 🚚 Get latest code and install dependencies
       uses: actions/checkout@v2
       with:
         fetch-depth: 2
