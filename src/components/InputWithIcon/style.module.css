@@ -1,0 +1,21 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  font-size: min(25px, 2vw);
+  padding: min(3vw, 25px) min(2.5vw, 20px);
+  color: rgba(255, 255, 255, 1);
+}
+
+.input {
+  margin-left: 1vw;
+  border: none;
+  outline: none;
+  background-color: transparent !important;
+}
+
+.iconContainer {
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
