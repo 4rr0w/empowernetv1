@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import styles from './style.module.css';
