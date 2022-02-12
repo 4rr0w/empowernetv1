@@ -1,6 +1,6 @@
 {
   "name": "empowernetv1",
-  "homepage": "https://empowernetmentoring.com/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
