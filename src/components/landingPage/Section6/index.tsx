@@ -29,9 +29,28 @@ export const Section6: React.FC<Section6Props> = () => {
       items: 1,
     },
   };
+
+  const a = {
+    0: {
+      image_link: '',
+      text: '',
+      name: '',
+    },
+    1: { image_link: '', text: '', name: '' },
+  };
   return (
     <div>
       <Carousel responsive={responsive}>
+        {/* {
+          Object.keys(a).map(enrtry => {
+            return(
+              <div >
+                <img src={ennrty}
+
+              </div>
+            )
+          })
+        } */}
         <div>Item 1</div>
         <div>Item 2</div>
         <div>Item 3</div>
