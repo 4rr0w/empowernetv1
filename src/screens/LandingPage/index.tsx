@@ -5,8 +5,6 @@ import { Section2 } from '../../components/landingPage/Section2';
 import { Section3 } from '../../components/landingPage/Section3';
 import { Section4 } from '../../components/landingPage/Section4';
 import { Section5 } from '../../components/landingPage/Section5';
-import { Section7 } from '../../components/landingPage/Section7';
-import { Section8 } from '../../components/landingPage/Section8';
 import styles from './style.module.css';
 
 export interface LandingPageProps {
@@ -22,8 +20,6 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
       <Section3 />
       <Section4 />
       <Section5 />
-      <Section7 />
-      <Section8 />
     </div>
   );
 };
