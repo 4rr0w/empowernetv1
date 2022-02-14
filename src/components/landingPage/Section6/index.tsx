@@ -17,7 +17,7 @@ export const Section6: React.FC<Section6Props> = ({
   return (
     <div>
       {text}
-      <OwlCarousel items={3} margin={8} autoplay>
+      <OwlCarousel items={3} margin={8}>
         <div>
           <img className={styles.img} src={Group51950} />
         </div>
