@@ -17,6 +17,7 @@ module.exports = {
   ${head}
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <style>
   body {
       font-family: 'Poppins';
