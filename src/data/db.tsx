@@ -1,4 +1,6 @@
-const a = {
+const a: {
+  [key: number | string]: { image_link: string; text: string; name: string };
+} = {
   0: {
     image_link: '../../../assets/landingPage/Section6/MaskGroup2.png',
     text: 'Use Notebooks, Worksflows, and Deployments together or Independently. Use Notebooks, Worksflows, and Deployments together or Independently. Use Notebooks, Worksflows, and Deployments together or Independently.',
