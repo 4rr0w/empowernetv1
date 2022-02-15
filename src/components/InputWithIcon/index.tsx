@@ -15,7 +15,7 @@ export interface InputWithIconProps {
 
 export const InputWithIcon: React.FC<InputWithIconProps> = ({
   placeholder = '',
-  backgroundColor = 'rgba(60, 22, 127, 0.8)',
+  backgroundColor = 'rgba(60, 22, 127, 0.07)',
   className = '',
   width = '100%',
   containerStyle = {},
@@ -31,9 +31,9 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
       className={classnames(styles.inputContainer, className)}
       style={{
         ...containerStyle,
-        borderLeft: `min(0.5vw, 6px) solid ${
-          focused ? onFocusColor : iconColor
-        }`,
+        borderLeft: focused
+          ? `min(0.5vw, 6px) solid ${onFocusColor}`
+          : `min(0.5vw, 6px) solid ${backgroundColor}`,
         backgroundColor,
       }}
     >
