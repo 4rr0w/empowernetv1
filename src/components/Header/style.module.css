@@ -67,7 +67,7 @@
 }
 
 .menuButton {
-  font-size: max(1.6vw, 18px);
+  font-size: min(1.6vw, 10px);
 }
 
 @media only screen and (max-width: 885px) {
