@@ -5,7 +5,10 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import styles from './style.module.css';
 import Group51950 from '../../../assets/landingPage/Section6/Group 51950.png';
+import Group51946 from '../../../assets/landingPage/Section6/Group 51946.png';
+import Maskgrp2 from '../../../assets/landingPage/Section6/MaskGroup2.png';
 import 'react-multi-carousel/lib/styles.css';
+import { a } from '../../../data/db';
 
 export interface Section6Props {}
 
@@ -22,40 +25,32 @@ export const Section6: React.FC<Section6Props> = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+      breakpoint: { max: 550, min: 0 },
+      items: 2,
     },
   };
 
-  const a = {
-    0: {
-      image_link: '',
-      text: '',
-      name: '',
-    },
-    1: { image_link: '', text: '', name: '' },
-  };
   return (
-    <div>
-      <Carousel responsive={responsive}>
-        {/* {
-          Object.keys(a).map(enrtry => {
-            return(
-              <div >
-                <img src={ennrty}
-
+    <div className={styles.mainSec6}>
+      <div className={styles.section}>
+        <Carousel responsive={responsive} className={styles.carousel}>
+          {Object.keys(a).map(() => {
+            return (
+              <div className={styles.container}>
+                <img className={styles.cards} src={Group51950} />
+                <div className={styles.cardspart}>
+                  <img className={styles.img} src={Maskgrp2} />
+                  <p className={styles.text}>{a[0].text}</p>
+                  <p className={styles.name}>{a[0].name}</p>
+                </div>
               </div>
-            )
-          })
-        } */}
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-      </Carousel>
+            );
+          })}
+        </Carousel>
+      </div>
     </div>
   );
 };
