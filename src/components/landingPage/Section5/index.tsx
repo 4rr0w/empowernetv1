@@ -9,13 +9,20 @@ import Maskgrp32 from '../../../assets/landingPage/Section5/MaskGroup32.png';
 
 export interface Section5Props {
   text?: string;
+  getRef?: Function;
 }
 
 export const Section5: React.FC<Section5Props> = ({
   text = 'Industry-leading advice and from our mentors',
+  getRef = () => null,
 }) => {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    getRef(ref);
+  }, [ref]);
+
   return (
-    <div className={styles.mainSec5}>
+    <div className={styles.mainSec5} ref={ref}>
       <h1 className={styles.text}>{text}</h1>
       <p className={styles.subtext}>
         Your mentor will offer guidance where they see opportunity, and even

@@ -1,18 +1,20 @@
-.mainSec7{
-    min-width: 100%;
-    min-height: fit-content;
-    background-color: #07020C;
-    overflow-x: hidden;
-    padding: 2vw;
+.mainSec7 {
+  min-width: 100%;
+  min-height: fit-content;
+  background-color: #07020c;
+  overflow-x: hidden;
+  padding: 2vw;
 }
-.text{
-    text-align: center;
-    font-size: max(2.4vw, 14px);
-    color: #C3BDFF;
+.text {
+  text-align: center;
+  font-size: max(2.4vw, 14px);
+  color: #c3bdff;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1vw;
+  flex-direction: row;
+  justify-content: center;
 }

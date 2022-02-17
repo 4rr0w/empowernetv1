@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 436px;
+  height: 100%;
+  min-height: fit-content;
+  background-color: #222429;
+  border-radius: 3vw;
+}
+.card {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: min(5vw, 10px);
+  color: #fff;
+}
+
+.text {
+  text-align: left;
+  font-size: max(1.1vw, 8px);
+  line-height: 1.5;
+  font-weight: regular;
+  font-family: 'GT Walsheim Pro';
+}
+.name {
+  text-align: left;
+  font-size: max(1.1vw, 10px);
+  font-weight: bold;
+  font-family: 'GT Walsheim Pro';
+}
+
+.img {
+  position: relative;
+  transform: translateY(-80%);
+  max-width: 120px;
+  width: 15vw;
+  height: auto;
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    max-width: 80%;
+    align-self: center;
+    justify-self: center;
+  }
+}

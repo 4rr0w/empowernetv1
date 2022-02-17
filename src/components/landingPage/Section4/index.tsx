@@ -7,11 +7,17 @@ import Group51937 from '../../../assets/landingPage/Section4/Group 51937.png';
 import Group51936 from '../../../assets/landingPage/Section4/Group 51936.png';
 import bead from '../../../assets/landingPage/Section4/Ellipse 149.svg';
 
-export interface Section4Props {}
+export interface Section4Props {
+  getRef?: Function;
+}
 
-export const Section4: React.FC<Section4Props> = () => {
+export const Section4: React.FC<Section4Props> = ({ getRef = () => null }) => {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    getRef(ref);
+  }, [ref]);
   return (
-    <div className={styles.mainSec4}>
+    <div className={styles.mainSec4} ref={ref}>
       <span className={styles.heading}>
         How <br />{' '}
         <span style={{ color: '#8366FE' }}>Empowernet Mentorship</span> <br />{' '}

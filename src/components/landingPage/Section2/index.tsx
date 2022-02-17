@@ -5,9 +5,16 @@ import Group51926 from '../../../assets/landingPage/Section2/Group 51926.png';
 import logo from '../../../assets/logo/logo.svg';
 import { CustomButton } from '../../CustomButton';
 
-export interface Section2Props {}
+export interface Section2Props {
+  getRef?: Function;
+}
 
-export const Section2: React.FC<Section2Props> = () => {
+export const Section2: React.FC<Section2Props> = ({ getRef = () => {} }) => {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    getRef(ref);
+  }, [ref]);
+
   const list: string[] = [
     'SKILLS OF INTEREST',
     'PERSONALISED',
@@ -16,7 +23,7 @@ export const Section2: React.FC<Section2Props> = () => {
     'YOUR LANGUAGE',
   ];
   return (
-    <div className={styles.mainSec2}>
+    <div className={styles.mainSec2} ref={ref}>
       <div className={styles.container}>
         <img className={styles.background} alt="" src={Group51926} />
         <img className={styles.laptop} alt="" src={Group51925} />
