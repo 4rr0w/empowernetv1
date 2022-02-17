@@ -19,7 +19,7 @@ export const Section7: React.FC<Section7Props> = ({
     <div className={styles.mainSec7} ref={ref}>
       <p className={styles.text}>{text}</p>
       <div className={styles.buttons}>
-        <CustomButton onClick={() => {}} size="middle" text="Book a Demo" />
+        <CustomButton onClick={() => {}} size="middle" text="Sign In" />
         <CustomButton
           isSecondary
           onClick={() => {}}

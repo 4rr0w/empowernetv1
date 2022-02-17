@@ -9,7 +9,7 @@
   background-color: #000;
   color: #fff !important;
   width: 100%;
-  padding: 2vw;
+  padding: 0 2vw;
   height: min-content;
 }
 
@@ -42,7 +42,7 @@
   display: flex;
   margin: 0 20px;
   justify-content: space-between;
-  font-size: max(1.5vw, 14px);
+  font-size: min(1.5vw, 14px);
 }
 
 .link {
