@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable indent */
 /* eslint-disable no-unused-vars */
 import React, { ReactNode, useState, useRef } from 'react';
@@ -9,32 +11,20 @@ import logo from '../../assets/logo/logo.svg';
 import useWindowDimensions from '../../hooks/viewport';
 import useOutsideAlerter from '../../hooks/detectOutsideClick';
 
-export interface HeaderProps {}
+export interface HeaderProps {
+  links?: string[];
+  handelClick?: Function;
+}
 
-export const Header: React.FC<HeaderProps> = () => {
+export const Header: React.FC<HeaderProps> = ({
+  links = [],
+  handelClick = () => null,
+}) => {
   const { width } = useWindowDimensions();
   const [showMenu, setShowMenu] = useState(false);
-  const links: { [key: string]: string } = {
-    'Find Mentor': '/',
-    Resources: '/resources',
-    FAQs: '/FAQs',
-    About: '/about',
-    'Contact Us': '/contactUs',
-  };
-  const renderLinks = (_links: { [key: string]: string }) => {
-    return (
-      <>
-        {Object.keys(_links).forEach((key) => (
-          <div className={styles.links}>jbjbij{key}</div>
-        ))}
-      </>
-    );
-  };
-
   const wrapperRef = useRef(null);
 
   const clickedOutside = useOutsideAlerter(wrapperRef);
-  console.log(clickedOutside);
 
   React.useEffect(() => {
     if (clickedOutside) setShowMenu(false);
@@ -43,12 +33,14 @@ export const Header: React.FC<HeaderProps> = () => {
   const headerContent = (
     <div className={styles.container} ref={wrapperRef}>
       <div className={styles.headerLinks}>
-        {Object.keys(links).map((key) => (
-          <div className={styles.link}>{key}</div>
+        {links.map((item) => (
+          <div className={styles.link} onClick={() => handelClick(item)}>
+            {item}
+          </div>
         ))}
       </div>
       <div className={styles.buttons}>
-        <CustomButton onClick={() => {}} size="middle" text="Book a Demo" />
+        <CustomButton onClick={() => {}} size="middle" text="Sign In" />
         <CustomButton
           isSecondary
           onClick={() => {}}
@@ -58,7 +50,6 @@ export const Header: React.FC<HeaderProps> = () => {
       </div>
     </div>
   );
-  console.log(width);
 
   return (
     <div className={styles.headerContainer}>

@@ -1,19 +1,16 @@
 /* eslint-disable no-undef */
 mentor_data = {
-  // # 'first_name': 'Full Name',
-  // # 'last_name': 'Last Name',
-  // # 'phone': '+91 12345 12345',//remove
-  // # 'city': 'City',//remove
-  // # 'state': 'State',// remove
-  // # 'country': 'Country',
-  // # 'education': 'Degree',
+  first_name: 'Full Name',
+  last_name: 'Last Name',
+  country: 'Country',
+  education: 'Degree',
   education_background: 'CS, EE......',
   profession: 'Profession',
   career_interests: 'Data Science',
   bio: 'This is Mentor from Mentor city.',
   work_experience: 2,
   skills: ['python', 'django'],
-  // 'languages': ['english', 'hindi'],
+  languages: ['english', 'hindi'],
   password: 'Empowernet*123',
   password2: 'Empowernet*123',
 };

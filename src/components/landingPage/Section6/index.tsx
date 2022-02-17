@@ -8,9 +8,16 @@ import 'react-multi-carousel/lib/styles.css';
 import { a } from '../../../data/db';
 import { Cards } from '../../Cards';
 
-export interface Section6Props {}
+export interface Section6Props {
+  getRef?: Function;
+}
 
-export const Section6: React.FC<Section6Props> = () => {
+export const Section6: React.FC<Section6Props> = ({ getRef = () => null }) => {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    getRef(ref);
+  }, [ref]);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -28,7 +35,7 @@ export const Section6: React.FC<Section6Props> = () => {
   };
 
   return (
-    <div className={styles.mainSec6}>
+    <div className={styles.mainSec6} ref={ref}>
       <div className={styles.section}>
         <Carousel responsive={responsive} className={styles.carousel}>
           {Object.keys(a).map(() => (

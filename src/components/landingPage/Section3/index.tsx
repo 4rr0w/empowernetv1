@@ -12,11 +12,17 @@ import Group519581 from '../../../assets/landingPage/Section3/Group 51958-1.png'
 import Group51960 from '../../../assets/landingPage/Section3/Group 51960.png';
 import Group51962 from '../../../assets/landingPage/Section3/Group 51962.png';
 
-export interface Section3Props {}
+export interface Section3Props {
+  getRef?: Function;
+}
 
-export const Section3: React.FC<Section3Props> = () => {
+export const Section3: React.FC<Section3Props> = ({ getRef = () => null }) => {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    getRef(ref);
+  }, [ref]);
   return (
-    <div className={styles.mainSec3}>
+    <div className={styles.mainSec3} ref={ref}>
       <div className={styles.skillsContainer}>
         <p className={styles.heading}>WHY EMPOWERNET?</p>
         <img className={styles.cshape3} alt="" src={cshape3} />

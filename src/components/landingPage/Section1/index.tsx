@@ -6,9 +6,16 @@ import Group51855 from '../../../assets/landingPage/Section1/Group 51855.png';
 import Group51941 from '../../../assets/landingPage/Section1/Group 51941.png';
 import { CustomButton } from '../../CustomButton';
 
-export interface Section1Props {}
+export interface Section1Props {
+  getRef?: Function;
+}
 
-export const Section1: React.FC<Section1Props> = () => {
+export const Section1: React.FC<Section1Props> = ({ getRef = () => null }) => {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    getRef(ref);
+  }, [ref]);
+
   const tags: { [key: string]: string[] } = {
     Mathematics: ['#7E60FF', '/path'],
     CS: ['#8BC5FF', '/path'],
@@ -17,7 +24,7 @@ export const Section1: React.FC<Section1Props> = () => {
   };
 
   return (
-    <div className={styles.mainSec1}>
+    <div className={styles.mainSec1} ref={ref}>
       <div className={styles.topContainer}>
         <img className={styles.graphics} alt="" src={Group51957} />
         <img className={styles.girl} alt="" src={Group51855} />
