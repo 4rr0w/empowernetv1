@@ -29,21 +29,33 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
   const handelHeaderClick = (linkKey: string) => {
     scrollToDiv(secRef[linkKey]);
   };
-
+  console.log(secRef);
   return (
     <div className={styles.landingContainer}>
       <Header links={links} handelClick={handelHeaderClick} />
       <Section1
-        getRef={(r: any) => setSecRef({ ...secRef, 'Find Mentor': r })}
+        getRef={(r: any) =>
+          setSecRef((prevState) => ({ ...prevState, 'Find Mentor': r }))
+        }
       />
       <Section2 />
-      <Section3 getRef={(r: any) => setSecRef({ ...secRef, Resources: r })} />
-      <Section4 getRef={(r: any) => setSecRef({ ...secRef, About: r })} />
+      <Section3
+        getRef={(r: any) =>
+          setSecRef((prevState) => ({ ...prevState, Resources: r }))
+        }
+      />
+      <Section4
+        getRef={(r: any) =>
+          setSecRef((prevState) => ({ ...prevState, About: r }))
+        }
+      />
       <Section5 />
       <Section6 />
       <Section7 />
       <Section8
-        getRef={(r: any) => setSecRef({ ...secRef, 'Contact Us': r })}
+        getRef={(r: any) =>
+          setSecRef((prevState) => ({ ...prevState, 'Contact Us': r }))
+        }
       />
     </div>
   );
