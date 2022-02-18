@@ -4,15 +4,20 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import styles from './style.module.css';
-import Group51950 from '../../../assets/landingPage/Section6/Group 51950.png';
-import Group51946 from '../../../assets/landingPage/Section6/Group 51946.png';
-import Maskgrp2 from '../../../assets/landingPage/Section6/MaskGroup2.png';
 import 'react-multi-carousel/lib/styles.css';
 import { a } from '../../../data/db';
+import { Cards } from '../../Cards';
 
-export interface Section6Props {}
+export interface Section6Props {
+  getRef?: Function;
+}
 
-export const Section6: React.FC<Section6Props> = () => {
+export const Section6: React.FC<Section6Props> = ({ getRef = () => null }) => {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    getRef(ref);
+  }, [ref]);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -24,31 +29,22 @@ export const Section6: React.FC<Section6Props> = () => {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3,
+      breakpoint: { max: 1024, min: 640 },
+      items: 2,
     },
     mobile: {
-      breakpoint: { max: 550, min: 0 },
-      items: 2,
+      breakpoint: { max: 640, min: 0 },
+      items: 1,
     },
   };
 
   return (
-    <div className={styles.mainSec6}>
+    <div className={styles.mainSec6} ref={ref}>
       <div className={styles.section}>
         <Carousel responsive={responsive} className={styles.carousel}>
-          {Object.keys(a).map(() => {
-            return (
-              <div className={styles.container}>
-                <img className={styles.cards} src={Group51950} />
-                <div className={styles.cardspart}>
-                  <img className={styles.img} src={Maskgrp2} />
-                  <p className={styles.text}>{a[0].text}</p>
-                  <p className={styles.name}>{a[0].name}</p>
-                </div>
-              </div>
-            );
-          })}
+          {Object.keys(a).map(() => (
+            <Cards />
+          ))}
         </Carousel>
       </div>
     </div>

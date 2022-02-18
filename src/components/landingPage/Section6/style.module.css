@@ -1,46 +1,21 @@
 .mainSec6 {
   width: 100%;
+  top: 0;
+  margin-top: 0;
+  height: fit-content;
   color: #fff;
   overflow: hidden;
   background: url('../../../assets/landingPage/Section6/Group 51946.png');
 }
 .section {
   height: auto;
-  width: 100vw;
-  height: 50vw;
+  width: 100%;
+  height: fit-content;
   position: relative;
   padding: 12vw 2vw 2vw 2vw;
-  max-width: 1366px;
-}
-.carousel {
-  min-height: fit-content;
-}
-.cards {
-  height: auto;
-  width: 30vw;
-  max-width: 436px;
-  min-height: fit-content;
-}
-.text {
-  margin-left: 2vw;
-  text-align: left;
-  margin-top: -15vw;
-  font-size: max(1.1vw, 8px);
-  line-height: 1.5;
-  font-weight: regular;
-  font-family: 'GT Walsheim Pro';
-  width: 23vw;
-}
-.name {
-  text-align: left;
-  font-size: max(1.1vw, 10px);
-  margin-left: 7vw;
-  margin-top: 2vw;
-  font-weight: bold;
-  font-family: 'GT Walsheim Pro';
 }
 
-.img {
-  margin-top: -38vw;
-  margin-left: 10vw;
+.carousel li {
+  display: flex;
+  justify-content: center;
 }
