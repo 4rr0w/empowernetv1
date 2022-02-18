@@ -4,6 +4,7 @@
 /* eslint-disable no-unused-vars */
 import React, { ReactNode, useState, useRef } from 'react';
 import { MenuOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 import { CustomButton } from '../CustomButton';
 import styles from './style.module.css';
 import logoFull from '../../assets/logo/full-logo.svg';
@@ -20,6 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
   links = [],
   handelClick = () => null,
 }) => {
+  const navigate = useNavigate();
   const { width } = useWindowDimensions();
   const [showMenu, setShowMenu] = useState(false);
   const wrapperRef = useRef(null);
@@ -43,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
         <CustomButton onClick={() => {}} size="middle" text="Sign In" />
         <CustomButton
           isSecondary
-          onClick={() => {}}
+          onClick={() => navigate('/signup')}
           size="large"
           text="Sign Up"
         />
