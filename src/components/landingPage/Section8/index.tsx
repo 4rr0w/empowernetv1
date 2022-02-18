@@ -34,7 +34,6 @@ export const Section8: React.FC<Section8Props> = ({
         <p className={styles.text}>{text}</p>
         <img className={styles.logo} src={Group51919} alt="" />
       </div>
-      <img className={styles.bottomShadow} src={BottomShadow} alt="" />
       <div className={styles.bottomNav}>
         <div className={styles.logonav}>
           <img className={styles.rectangle} src={Rectangle} />
