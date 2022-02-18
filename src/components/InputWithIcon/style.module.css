@@ -11,9 +11,13 @@
 .input {
   margin-left: 1vw;
   border: none;
-  outline: none;
+  outline: none !important;
   font-weight: 100 !important;
   background-color: transparent !important;
+}
+
+.input:focus {
+  box-shadow: none;
 }
 
 ::placeholder {

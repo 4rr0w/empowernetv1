@@ -9,7 +9,7 @@
   align-items: center !important;
   justify-content: center;
   text-align: center;
-  font-size: min(1.5vw, 14px);
+  font-size: min(2vw, 14px);
 }
 
 .button:focus {

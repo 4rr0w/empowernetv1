@@ -7,6 +7,7 @@
   flex-direction: column;
   padding-left: min(18.3vw, 100px);
   color: #fff;
+  padding-bottom: 20px;
 }
 
 .heading {
