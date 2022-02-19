@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
+import { Form } from 'antd';
 import React, { RefObject } from 'react';
+import { Progress } from '../../../components/Progress';
 import { AboutMePage } from '../AboutMePage';
 import { MentorMenteeOption } from '../MentorMenteeOption';
 import { WelcomePage } from '../WelcomePage';
@@ -12,8 +14,7 @@ export const SignUp: React.FC<SignUpProps> = () => {
     if (ref && ref.current) ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // const [welcomRef, setWelcomeRef] = React.useState<RefObject<null>>();
-  // const [aboutRef, setAboutRef] = React.useState<RefObject<null>>();
+  const [step, setStep] = React.useState(0);
 
   const [optionChosen, setOptionChosen] = React.useState('');
   const welcomeRef = React.useRef(null);
@@ -21,23 +22,42 @@ export const SignUp: React.FC<SignUpProps> = () => {
 
   const handelClick = (option: string) => {
     setOptionChosen(option);
+    setStep(1);
     scrollToDiv(welcomeRef);
   };
 
   const handelNextClick = (email: string) => {
+    setStep(2);
     scrollToDiv(aboutRef);
   };
 
+  const steps = [
+    <MentorMenteeOption
+      onOptionClick={handelClick}
+      optionChosen={optionChosen}
+    />,
+    <WelcomePage onNextClick={handelNextClick} />,
+    <AboutMePage mentor={optionChosen === 'mentor'} />,
+  ];
+
   return (
     <div className={styles.container}>
-      <MentorMenteeOption
-        onOptionClick={handelClick}
-        optionChosen={optionChosen}
-      />
-      <div ref={welcomeRef} />
-      <WelcomePage onNextClick={handelNextClick} />
-      <div ref={aboutRef} />
-      <AboutMePage mentor={optionChosen === 'mentor'} />
+      <div style={{ position: 'fixed' }}>
+        <Progress percent={(step / 3) * 100} color="red" />
+      </div>
+
+      <Form>
+        {steps[step]}
+
+        {/* <MentorMenteeOption
+          onOptionClick={handelClick}
+          optionChosen={optionChosen}
+        />
+        <div ref={welcomeRef} />
+        <WelcomePage onNextClick={handelNextClick} />
+        <div ref={aboutRef} />
+        <AboutMePage mentor={optionChosen === 'mentor'} /> */}
+      </Form>
     </div>
   );
 };

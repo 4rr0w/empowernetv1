@@ -19,7 +19,7 @@ const wrapRouter = (Component: React.FC) => {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ height: '100vh' }}>
       <Suspense fallback={<Spinner large />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
