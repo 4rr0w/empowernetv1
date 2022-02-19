@@ -38,7 +38,9 @@
   height: min-content;
   color: #fafafa;
 }
-
+.bottomNav2 {
+  display: none;
+}
 .bottomShadow {
   position: absolute;
   bottom: 0;
@@ -59,11 +61,15 @@
   top: 0;
   margin-bottom: 4vw;
 }
+
 .sociallinks {
   position: relative;
   margin-left: 17.7vw;
   display: flex;
   flex-direction: column;
+}
+.socialicons {
+  display: none;
 }
 .icon1 {
   display: flex;
@@ -91,12 +97,12 @@
   margin-left: 2vw;
 }
 .text2 {
-  font-size: max(1.84vw, 16px);
+  font-size: max(1.84vw, 15px);
   font-weight: bold;
   letter-spacing: 3px;
 }
 .text3 {
-  font-size: max(1vw, 12px);
+  font-size: max(1vw, 10px);
   margin: 0;
 }
 .text4 {
@@ -135,6 +141,41 @@
     margin-bottom: 0vw;
   }
   .home {
-    margin-left: 3vw;
+    margin-left: 30vw;
+  }
+  .bottomNav {
+    display: none;
+  }
+  .bottomNav2 {
+    display: contents;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10vw;
+    height: min-content;
+    color: #fafafa;
+  }
+  .socialicons {
+    display: flex;
+    position: absolute;
+    display: contents;
+    top: -10vw;
+    color: #fafafa;
+  }
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  .contact {
+    margin: -8vw 0 2vw 6vw;
+  }
+  .ml {
+    margin-left: 1vw;
+  }
+}
+@media (max-width: 465px) {
+  .home {
+    margin-left: 20vw;
   }
 }

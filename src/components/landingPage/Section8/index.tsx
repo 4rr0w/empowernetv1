@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   InstagramOutlined,
   MailFilled,
@@ -8,7 +8,7 @@ import {
   FacebookFilled,
   TwitterCircleFilled,
 } from '@ant-design/icons';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './style.module.css';
 import BottomShadow from '../../../assets/landingPage/Section8/Bottom Shadow.svg';
 import Group18 from '../../../assets/landingPage/Section8/Group 18.svg';
@@ -83,6 +83,43 @@ export const Section8: React.FC<Section8Props> = ({
           <p className={styles.text3}>Footer Link</p>
           <p className={styles.text3}>Footer Link</p>
           <p className={styles.text3}>Footer Link</p>
+        </div>
+      </div>
+      {/* *******   content to show for screens <640   **** */}
+      <div>
+        <div className={styles.bottomNav2}>
+          <div className={styles.logonav}>
+            <img className={styles.rectangle} src={Rectangle} />
+            <img className={styles.grp18} src={Group18} />
+            <div />
+          </div>
+          <div className={styles.home}>
+            <p className={styles.text2}>HOME</p>
+            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Footer Link</p>
+          </div>
+          <div className={styles.platforms}>
+            <p className={styles.text2}>PLATFORM</p>
+            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Footer Link</p>
+          </div>
+          <div className={styles.services}>
+            <p className={styles.text2}>SERVICES</p>
+            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Footer Link</p>
+          </div>
+        </div>
+        <div className={styles.socialicons}>
+          <div className={styles.contact}>
+            <MailFilled className="" />
+            <PhoneFilled className={styles.ml} />
+            <InstagramOutlined className={styles.ml} />
+            <FacebookFilled className={styles.ml} />
+            <TwitterCircleFilled className={styles.ml} />
+          </div>
         </div>
       </div>
       <div className={styles.copyright}>
