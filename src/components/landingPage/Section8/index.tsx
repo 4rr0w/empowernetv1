@@ -35,13 +35,9 @@ export const Section8: React.FC<Section8Props> = ({
         <img className={styles.logo} src={Group51919} alt="" />
       </div>
       <div className={styles.bottomNav}>
-        <div className={styles.logonav}>
-          <img className={styles.rectangle} src={Rectangle} />
-          <img className={styles.grp18} src={Group18} />
-          <div />
-        </div>
-        <div className={styles.sociallinks}>
-          <div>
+        <div className={styles.social}>
+          <img className={styles.footerLogo} src={Group18} />
+          <div className={styles.sociallinks}>
             <div className={styles.icon1}>
               <MailFilled />
               <p className={styles.text4}>info@empowernet.app</p>
@@ -50,60 +46,33 @@ export const Section8: React.FC<Section8Props> = ({
               <PhoneFilled />
               <p className={styles.text4}>+99 999 999 999</p>
             </div>
-          </div>
-
-          <div className={styles.icon1}>
-            <InstagramOutlined />
-            <p className={styles.text4}>link</p>
-          </div>
-          <div className={styles.icon1}>
-            <FacebookFilled />
-            <p className={styles.text4}>link</p>
-          </div>
-          <div className={styles.icon1}>
-            <TwitterCircleFilled />
-            <p className={styles.text4}>link</p>
+            <div className={styles.icon1}>
+              <InstagramOutlined />
+              <p className={styles.text4}>link</p>
+            </div>
+            <div className={styles.icon1}>
+              <FacebookFilled />
+              <p className={styles.text4}>link</p>
+            </div>
+            <div className={styles.icon1}>
+              <TwitterCircleFilled />
+              <p className={styles.text4}>link</p>
+            </div>
           </div>
         </div>
-        <div className={styles.home}>
-          <p className={styles.text2}>HOME</p>
-          <p className={styles.text3}>Footer Link</p>
-          <p className={styles.text3}>Footer Link</p>
-        </div>
-        <div className={styles.platforms}>
-          <p className={styles.text2}>PLATFORM</p>
-          <p className={styles.text3}>Footer Link</p>
-          <p className={styles.text3}>Footer Link</p>
-          <p className={styles.text3}>Footer Link</p>
-        </div>
-        <div className={styles.services}>
-          <p className={styles.text2}>SERVICES</p>
-          <p className={styles.text3}>Footer Link</p>
-          <p className={styles.text3}>Footer Link</p>
-          <p className={styles.text3}>Footer Link</p>
-          <p className={styles.text3}>Footer Link</p>
-          <p className={styles.text3}>Footer Link</p>
-        </div>
-      </div>
-      {/* *******   content to show for screens <640   **** */}
-      <div>
-        <div className={styles.bottomNav2}>
-          <div className={styles.logonav}>
-            <img className={styles.rectangle} src={Rectangle} />
-            <img className={styles.grp18} src={Group18} />
-            <div />
-          </div>
-          <div className={styles.home}>
+        <div className={styles.links}>
+          <div className={styles.linkContainer}>
             <p className={styles.text2}>HOME</p>
             <p className={styles.text3}>Footer Link</p>
             <p className={styles.text3}>Footer Link</p>
           </div>
-          <div className={styles.platforms}>
+          <div className={styles.linkContainer}>
             <p className={styles.text2}>PLATFORM</p>
             <p className={styles.text3}>Footer Link</p>
             <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Footer Link</p>
           </div>
-          <div className={styles.services}>
+          <div className={styles.linkContainer}>
             <p className={styles.text2}>SERVICES</p>
             <p className={styles.text3}>Footer Link</p>
             <p className={styles.text3}>Footer Link</p>
@@ -112,20 +81,12 @@ export const Section8: React.FC<Section8Props> = ({
             <p className={styles.text3}>Footer Link</p>
           </div>
         </div>
-        <div className={styles.socialicons}>
-          <div className={styles.contact}>
-            <MailFilled className="" />
-            <PhoneFilled className={styles.ml} />
-            <InstagramOutlined className={styles.ml} />
-            <FacebookFilled className={styles.ml} />
-            <TwitterCircleFilled className={styles.ml} />
-          </div>
-        </div>
       </div>
+
       <div className={styles.copyright}>
         <p>
-          &copy; 2021 Company LTD. All rights reserved. Terms & Conditions |
-          Policy
+          &copy; 2021 Empowernet Mentoring. All rights reserved. Terms &
+          Conditions | Policy
         </p>
       </div>
     </div>
