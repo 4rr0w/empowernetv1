@@ -19,8 +19,8 @@ export const Cards: React.FC<CardsProps> = ({
 }) => {
   return (
     <div className={styles.container} style={{ background: Group51950 }}>
+      <img className={styles.img} src={Maskgrp2} alt="" />
       <div className={styles.card}>
-        <img className={styles.img} src={Maskgrp2} alt="" />
         <p className={styles.text}>{a.text}</p>
         <p className={styles.name}>{a.name}</p>
       </div>

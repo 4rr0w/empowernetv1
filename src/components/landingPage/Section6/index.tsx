@@ -29,7 +29,11 @@ export const Section6: React.FC<Section6Props> = ({ getRef = () => null }) => {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 720, min: 0 },
+      breakpoint: { max: 1024, min: 640 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 640, min: 0 },
       items: 1,
     },
   };

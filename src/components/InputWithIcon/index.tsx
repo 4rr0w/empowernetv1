@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { CSSProperties, ReactNode } from 'react';
 import classnames from 'classnames';
+import { Input, InputProps } from 'antd';
 import styles from './style.module.css';
 
-export interface InputWithIconProps {
+export interface InputWithIconProps extends InputProps {
   placeholder?: string;
   backgroundColor?: string;
   className?: string;
@@ -22,6 +24,7 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
   iconColor = '#fff',
   icon,
   onFocusColor = '#fff',
+  ...props
 }) => {
   const [focused, setFocused] = React.useState(false);
   const onFocus = () => setFocused(true);
@@ -45,12 +48,13 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
       >
         {icon}
       </div>
-      <input
+      <Input
         placeholder={placeholder}
         className={styles.input}
         style={{ width }}
         onFocus={onFocus}
         onBlur={onBlur}
+        {...props}
       />
     </div>
   );

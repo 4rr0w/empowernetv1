@@ -29,7 +29,7 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
   const handelHeaderClick = (linkKey: string) => {
     scrollToDiv(secRef[linkKey]);
   };
-  console.log(secRef);
+
   return (
     <div className={styles.landingContainer}>
       <Header links={links} handelClick={handelHeaderClick} />
