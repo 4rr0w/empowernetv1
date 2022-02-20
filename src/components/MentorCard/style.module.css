@@ -1,0 +1,94 @@
+.mainSec {
+  width: 70vw;
+  background-color: #ffffff;
+  max-width: 957px;
+  height: 37vw;
+  overflow: hidden;
+  min-height: fit-content;
+  position: relative;
+  box-shadow: 0px 29px 36px #7d8a9f21;
+  display: flex;
+  align-items: center;
+  border: 0.824999988079071px solid #c9d1db1b;
+  border-radius: 16px;
+}
+.container {
+  display: flex;
+  background-color: #ffffff;
+  color: black;
+  height: 28.11vw;
+  position: absolute;
+  margin: 3.5vw;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+}
+.container2 {
+  margin-top: 2.5vw;
+  margin-left: 1vw;
+}
+.desc {
+  display: flex;
+  margin: 0;
+}
+.img {
+  width: 6.42vw;
+  height: auto;
+  max-width: 87px;
+}
+.name {
+  font-size: max(1.68vw, 14px);
+  color: #192646;
+  font-weight: bolder;
+}
+.text2 {
+  font-size: max(1vw, 12px);
+  color: #192646;
+  margin: -1.2vw 0 0 0;
+}
+.textshort {
+  font-size: 0.6vw;
+  color: #192646;
+}
+.stars {
+  display: flex;
+  width: 1vw;
+  max-width: 14px;
+  height: auto;
+  color: #f2dc60;
+}
+.info {
+  color: #8c919c;
+  font-size: max(1.17vw, 12px);
+  overflow-x: hidden;
+  text-align: left;
+  width: 46.8vw;
+  height: 16.9vw;
+  font: normal normal normal 16px/24px Poppins;
+  letter-spacing: 0px;
+}
+.contact {
+  margin-left: min(7vw, 96px);
+  width: 8.85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0effc 0% 0% no-repeat padding-box;
+  text-align: center;
+  border-radius: 16px;
+  overflow-x: hidden;
+}
+.texticon {
+  font-size: max(0.8vw, 8px);
+  color: #192646;
+  font-weight: bolder;
+}
+.sideicon1 {
+  margin-top: 4vw;
+  color: #9169db;
+}
+.sideicon {
+  color: #9169db;
+}
