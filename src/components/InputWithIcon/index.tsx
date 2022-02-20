@@ -13,10 +13,12 @@ export interface InputWithIconProps extends InputProps {
   iconColor?: string;
   onFocusColor?: string;
   icon?: ReactNode;
+  error?: boolean;
 }
 
 export const InputWithIcon: React.FC<InputWithIconProps> = ({
   placeholder = '',
+  error = false,
   backgroundColor = 'rgba(60, 22, 127, 0.07)',
   className = '',
   width = '100%',
@@ -24,6 +26,7 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
   iconColor = '#fff',
   icon,
   onFocusColor = '#fff',
+
   ...props
 }) => {
   const [focused, setFocused] = React.useState(false);
@@ -36,7 +39,7 @@ export const InputWithIcon: React.FC<InputWithIconProps> = ({
         ...containerStyle,
         borderLeft: focused
           ? `min(0.5vw, 6px) solid ${onFocusColor}`
-          : `min(0.5vw, 6px) solid ${backgroundColor}`,
+          : `min(0.5vw, 6px) solid ${error ? 'red' : backgroundColor}`,
         backgroundColor,
       }}
     >

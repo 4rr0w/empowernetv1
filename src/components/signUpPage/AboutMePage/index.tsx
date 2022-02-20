@@ -5,31 +5,51 @@ import { InputWithIcon } from '../../InputWithIcon';
 import styles from './style.module.css';
 
 export interface AboutMePageProps {
-  getRef?: Function;
   mentor?: boolean;
   onNextClick?: Function;
 }
 
 export const AboutMePage: React.FC<AboutMePageProps> = ({
-  getRef = () => null,
   mentor = false,
   onNextClick = () => null,
 }) => {
-  const ref = React.useRef(null);
-  React.useEffect(() => {
-    getRef(ref);
-  }, [ref]);
+  const [error, setError] = React.useState(false);
+  const [data, setData] = React.useState({
+    firstName: '',
+    lastName: '',
+    country: '',
+    education: '',
+    languages: '',
+  });
+  const handelNext = () => {
+    if (!error) onNextClick(data);
+  };
 
+  React.useEffect(() => {
+    setError(Object.values(data).some((x) => x === null || x === ''));
+  }, [data]);
   return (
     <div>
       <div className={styles.row}>
         <InputWithIcon
+          onChange={(e) =>
+            setData((prevState) => ({
+              ...prevState,
+              firstName: e.target.value,
+            }))
+          }
           className={styles.input}
           icon={<MdAdd style={{ fontSize: 'min(25px, 4vw)' }} />}
           onFocusColor="rgba(255, 215, 20, 1)"
           placeholder="First Name"
         />
         <InputWithIcon
+          onChange={(e) =>
+            setData((prevState) => ({
+              ...prevState,
+              lastName: e.target.value,
+            }))
+          }
           className={styles.input}
           icon={<MdAdd style={{ fontSize: 'min(25px, 4vw)' }} />}
           onFocusColor="rgba(255, 215, 20, 1)"
@@ -37,12 +57,24 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
         />
       </div>
       <InputWithIcon
+        onChange={(e) =>
+          setData((prevState) => ({
+            ...prevState,
+            country: e.target.value,
+          }))
+        }
         className={styles.input}
         icon={<MdPlace style={{ fontSize: 'min(25px, 4vw)' }} />}
         onFocusColor="rgba(255, 215, 20, 1)"
         placeholder="Country"
       />
       <InputWithIcon
+        onChange={(e) =>
+          setData((prevState) => ({
+            ...prevState,
+            education: e.target.value,
+          }))
+        }
         className={styles.input}
         icon={<MdSchool style={{ fontSize: 'min(25px, 4vw)' }} />}
         onFocusColor="rgba(255, 215, 20, 1)"
@@ -50,6 +82,12 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
       />
       {mentor && (
         <InputWithIcon
+          onChange={(e) =>
+            setData((prevState) => ({
+              ...prevState,
+              profession: e.target.value,
+            }))
+          }
           className={styles.input}
           icon={<MdWork style={{ fontSize: 'min(25px, 4vw)' }} />}
           onFocusColor="rgba(255, 215, 20, 1)"
@@ -58,14 +96,21 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
       )}
 
       <InputWithIcon
+        onChange={(e) =>
+          setData((prevState) => ({
+            ...prevState,
+            languages: e.target.value,
+          }))
+        }
         className={styles.input}
         icon={<MdLanguage style={{ fontSize: 'min(25px, 4vw)' }} />}
         onFocusColor="rgba(255, 215, 20, 1)"
         placeholder="Languages"
       />
       <CustomButton
+        disabled={error}
         block
-        onClick={() => onNextClick()}
+        onClick={handelNext}
         size="large"
         text="Next"
         style={{

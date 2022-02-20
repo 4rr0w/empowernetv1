@@ -13,6 +13,14 @@ export const WelcomePage: React.FC<WelcomePageProps> = ({
   onNextClick = () => null,
 }) => {
   const [email, setEmail] = React.useState('');
+  const [error, setError] = React.useState(false);
+  const handelNext = () => {
+    if (!error) onNextClick(email);
+  };
+
+  React.useEffect(() => {
+    setError(!/^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/.test(email));
+  }, [email]);
   return (
     <div>
       <FormItem
@@ -20,6 +28,7 @@ export const WelcomePage: React.FC<WelcomePageProps> = ({
         rules={[{ required: true, message: 'Please input your email!' }]}
       >
         <InputWithIcon
+          error={error}
           type="email"
           onChange={(e) => setEmail(e.target.value)}
           className={styles.input}
@@ -30,7 +39,8 @@ export const WelcomePage: React.FC<WelcomePageProps> = ({
       </FormItem>
       <FormItem>
         <CustomButton
-          onClick={() => onNextClick(email)}
+          disabled={error}
+          onClick={handelNext}
           size="large"
           block
           text="Next"
