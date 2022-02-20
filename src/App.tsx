@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { LandingPage } from './screens/LandingPage';
 import { Spinner } from './components/Spinner';
-import { SignUp } from './screens/SignUp/SignUp';
+import { SignUp } from './screens/SignUp';
 
 const wrapRouter = (Component: React.FC) => {
   const WrappedComponent: React.FC<{}> = () => (

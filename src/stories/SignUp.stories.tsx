@@ -3,7 +3,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
-import { SignUp, SignUpProps } from '../screens/SignUp/SignUp';
+import { SignUp, SignUpProps } from '../screens/SignUp';
 
 export default {
   title: 'screens/SignUP',
