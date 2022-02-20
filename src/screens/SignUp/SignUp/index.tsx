@@ -3,6 +3,7 @@ import { Form } from 'antd';
 import React, { RefObject } from 'react';
 import { Progress } from '../../../components/Progress';
 import { AboutMePage } from '../AboutMePage';
+import { ChoosePassword } from '../ChoosePassword';
 import { MentorMenteeOption } from '../MentorMenteeOption';
 import { WelcomePage } from '../WelcomePage';
 import styles from './style.module.css';
@@ -31,19 +32,31 @@ export const SignUp: React.FC<SignUpProps> = () => {
     scrollToDiv(aboutRef);
   };
 
+  const handelNextClick2 = () => {
+    setStep(3);
+  };
+
+  const handelSignUp = (password: string) => {
+    console.log(password, 'signup');
+  };
+
   const steps = [
     <MentorMenteeOption
       onOptionClick={handelClick}
       optionChosen={optionChosen}
     />,
     <WelcomePage onNextClick={handelNextClick} />,
-    <AboutMePage mentor={optionChosen === 'mentor'} />,
+    <AboutMePage
+      mentor={optionChosen === 'mentor'}
+      onNextClick={handelNextClick2}
+    />,
+    <ChoosePassword onNextClick={handelSignUp} />,
   ];
 
   return (
     <div className={styles.container}>
       <div style={{ position: 'fixed' }}>
-        <Progress percent={(step / 3) * 100} color="red" />
+        <Progress percent={(step / 4) * 100} color="red" />
       </div>
 
       <Form>

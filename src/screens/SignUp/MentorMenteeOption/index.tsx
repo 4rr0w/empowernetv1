@@ -14,13 +14,15 @@ export const MentorMenteeOption: React.FC<MentorMenteeOptionProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <span className={styles.heading}>Sign Up as </span>
+      <span className={styles.heading}> Choose account type </span>
       <br />
       <div className={styles.row}>
         <CustomButton
           onClick={() => onOptionClick('mentor')}
-          size="large"
           style={{
+            marginTop: '2vw',
+            padding: '2vw',
+            fontSize: 'min(16px,2vw)',
             background: `${
               optionChosen === 'mentor' ? '#7C1BD1' : 'transparent'
             } 0% 0% no-repeat padding-box`,
@@ -31,8 +33,10 @@ export const MentorMenteeOption: React.FC<MentorMenteeOptionProps> = ({
 
         <CustomButton
           onClick={() => onOptionClick('mentee')}
-          size="large"
           style={{
+            marginTop: '2vw',
+            padding: '2vw',
+            fontSize: 'min(16px,2vw)',
             background: `${
               optionChosen === 'mentee' ? '#7C1BD1' : 'transparent'
             } 0% 0% no-repeat padding-box`,

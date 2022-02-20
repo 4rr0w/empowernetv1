@@ -19,6 +19,7 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
   React.useEffect(() => {
     getRef(ref);
   }, [ref]);
+
   return (
     <div className={styles.container}>
       <span className={styles.heading}>About me</span>
