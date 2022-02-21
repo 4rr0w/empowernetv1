@@ -2,6 +2,8 @@
 /* eslint-disable no-unused-vars */
 import { Form } from 'antd';
 import React, { ReactNode, RefObject } from 'react';
+import { AccordionContext } from 'react-bootstrap';
+import instance from '../../client/axiomClient';
 import { Progress } from '../../components/Progress';
 import { AboutMePage } from '../../components/signUpPage/AboutMePage';
 import { ChoosePassword } from '../../components/signUpPage/ChoosePassword';
@@ -22,6 +24,16 @@ export const SignUp: React.FC<SignUpProps> = () => {
   const [optionChosen, setOptionChosen] = React.useState('');
   const welcomeRef = React.useRef(null);
   const aboutRef = React.useRef(null);
+  const [data, setData] = React.useState({
+    email: '',
+    first_name: '',
+    last_name: '',
+    country: '',
+    education: '',
+    languages: '',
+    password: '',
+  });
+  const [loading, setLoading] = React.useState(false);
 
   const handelClick = (option: string) => {
     setOptionChosen(option);
@@ -30,16 +42,33 @@ export const SignUp: React.FC<SignUpProps> = () => {
   };
 
   const handelNextClick = (email: string) => {
+    setData((prevState) => ({
+      ...prevState,
+      email,
+    }));
     setStep(2);
     scrollToDiv(aboutRef);
   };
 
-  const handelNextClick2 = () => {
+  const handelNextClick2 = (dataObtained: any) => {
     setStep(3);
+    setData((prevState) => ({
+      ...prevState,
+      ...dataObtained,
+    }));
   };
 
-  const handelSignUp = (password: string) => {
-    console.log(password, 'signup');
+  const handelSignUp = async (password: string) => {
+    setLoading(true);
+    setData((prevState) => ({
+      ...prevState,
+      password,
+    }));
+
+    await instance.post(`/${optionChosen}/register/`, data).then((response) => {
+      console.log(response);
+      setLoading(false);
+    });
   };
 
   const steps: {
@@ -69,7 +98,9 @@ export const SignUp: React.FC<SignUpProps> = () => {
     },
     3: {
       heading: 'Choose account type',
-      component: <ChoosePassword onNextClick={handelSignUp} />,
+      component: (
+        <ChoosePassword loading={loading} onNextClick={handelSignUp} />
+      ),
     },
   };
 

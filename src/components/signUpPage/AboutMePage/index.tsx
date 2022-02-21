@@ -15,8 +15,8 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
 }) => {
   const [error, setError] = React.useState(false);
   const [data, setData] = React.useState({
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     country: '',
     education: '',
     languages: '',
@@ -35,7 +35,7 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
           onChange={(e) =>
             setData((prevState) => ({
               ...prevState,
-              firstName: e.target.value,
+              first_name: e.target.value,
             }))
           }
           className={styles.input}
@@ -47,7 +47,7 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
           onChange={(e) =>
             setData((prevState) => ({
               ...prevState,
-              lastName: e.target.value,
+              last_name: e.target.value,
             }))
           }
           className={styles.input}

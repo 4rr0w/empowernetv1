@@ -9,10 +9,12 @@ import styles from './style.module.css';
 const { Text } = Typography;
 export interface ChoosePasswordProps {
   onNextClick?: Function;
+  loading?: boolean;
 }
 
 export const ChoosePassword: React.FC<ChoosePasswordProps> = ({
   onNextClick = () => null,
+  loading = false,
 }) => {
   const [pass, setPass] = React.useState('');
   const [pass2, setPass2] = React.useState('');
@@ -24,12 +26,12 @@ export const ChoosePassword: React.FC<ChoosePasswordProps> = ({
   };
 
   React.useEffect(() => {
-    if (pass !== pass2) {
-      setError(true);
-      setErrorText('Passwords does not match.');
-    } else if (pass.length < 6) {
+    if (pass.length < 6) {
       setError(true);
       setErrorText('Please choose a password with min length 6');
+    } else if (pass !== pass2) {
+      setError(true);
+      setErrorText('Passwords does not match.');
     } else {
       setError(false);
       setErrorText('');
@@ -43,7 +45,7 @@ export const ChoosePassword: React.FC<ChoosePasswordProps> = ({
         rules={[{ required: true, message: 'Please input your email!' }]}
       >
         <InputWithIcon
-          type="text"
+          type="password"
           onChange={(e) => setPass(e.target.value)}
           className={styles.input}
           icon={<MdPassword style={{ fontSize: 'min(25px, 4vw)' }} />}
@@ -56,7 +58,7 @@ export const ChoosePassword: React.FC<ChoosePasswordProps> = ({
         rules={[{ required: true, message: 'Please input your email!' }]}
       >
         <InputWithIcon
-          type="text"
+          type="password"
           onChange={(e) => setPass2(e.target.value)}
           className={styles.input}
           icon={<MdPassword style={{ fontSize: 'min(25px, 4vw)' }} />}
@@ -77,6 +79,7 @@ export const ChoosePassword: React.FC<ChoosePasswordProps> = ({
           </Text>
         )}
         <CustomButton
+          loading={loading}
           disabled={error}
           onClick={handelSignup}
           size="large"
