@@ -1,57 +1,57 @@
 .mainSec {
-  width: 70vw;
+  width: fit-content;
   background-color: #ffffff;
-  max-width: 957px;
-  height: 37vw;
   overflow: hidden;
-  min-height: fit-content;
   position: relative;
   box-shadow: 0px 29px 36px #7d8a9f21;
   display: flex;
-  align-items: center;
   border: 0.824999988079071px solid #c9d1db1b;
   border-radius: 16px;
-}
-.container {
-  display: flex;
-  background-color: #ffffff;
-  color: black;
-  height: 28.11vw;
-  position: absolute;
-  margin: 3.5vw;
+  padding: min(3.5vw, 20px);
 }
 
-.bio {
+.container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  height: 100% !important;
+  background-color: #ffffff;
+  color: black;
 }
-.container2 {
-  margin-top: 2.5vw;
-  margin-left: 1vw;
-}
-.desc {
+
+.header {
   display: flex;
-  margin: 0;
+  width: 100%;
 }
-.img {
-  width: 6.42vw;
-  height: auto;
-  max-width: 87px;
-}
+
 .name {
-  font-size: max(1.68vw, 14px);
+  font-size: min(20px, 3vw);
   color: #192646;
   font-weight: bolder;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2vw;
+  margin: 0;
 }
+
+.desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 8vw;
+  height: 8vw;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 2vw;
+}
+
 .text2 {
-  font-size: max(1vw, 12px);
-  color: #192646;
-  margin: -1.2vw 0 0 0;
-}
-.textshort {
-  font-size: 0.6vw;
+  font-size: min(16px, 2vw);
   color: #192646;
 }
+
 .stars {
   display: flex;
   width: 1vw;
@@ -59,36 +59,71 @@
   height: auto;
   color: #f2dc60;
 }
-.info {
+
+.bio {
+  margin-top: 2vw;
+  max-width: 450px;
   color: #8c919c;
-  font-size: max(1.17vw, 12px);
-  overflow-x: hidden;
   text-align: left;
-  width: 46.8vw;
-  height: 16.9vw;
-  font: normal normal normal 16px/24px Poppins;
-  letter-spacing: 0px;
+  font: normal normal normal 1.2em Poppins;
+  font-size: min(3vw, 14px);
 }
+
+.tags {
+  position: relative;
+  display: flex;
+  margin-top: min(30px, 2vw);
+}
+
+.tag {
+  position: relative;
+  margin-right: min(15px, 1vw);
+  height: max(4vw, 18px) !important;
+  padding: 1vw 1.2vw !important;
+  font-size: min(1.6vw, 18px) !important;
+  border-radius: 1.317vw;
+  cursor: pointer;
+}
+
 .contact {
-  margin-left: min(7vw, 96px);
-  width: 8.85vw;
+  margin-left: min(2vw, 96px);
+  max-width: 80px;
+  padding: 2vw 0.5vw;
   display: flex;
   flex-direction: column;
+  height: fit-content;
   align-items: center;
   background: #f0effc 0% 0% no-repeat padding-box;
   text-align: center;
-  border-radius: 16px;
-  overflow-x: hidden;
+  border-radius: min(3vw, 16px);
 }
 .texticon {
-  font-size: max(0.8vw, 8px);
+  font-size: min(2.5vw, 8px);
   color: #192646;
-  font-weight: bolder;
-}
-.sideicon1 {
-  margin-top: 4vw;
-  color: #9169db;
+  flex-wrap: wrap;
 }
 .sideicon {
+  font-size: min(20px, 2.5vw);
   color: #9169db;
+}
+
+@media only screen and (min-width: 720px) {
+  .mainSec {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
+    flex-direction: row;
+    max-width: 100%;
+    width: fit-content;
+    padding: min(1vw, 5px);
+    margin-left: 0;
+    max-width: 500px;
+  }
+
+  .contact > div {
+    display: flex;
+    flex-direction: column;
+    margin: min(1vw, 5px) min(1.5vw, 10px);
+  }
 }
