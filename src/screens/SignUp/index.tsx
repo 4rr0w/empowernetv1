@@ -8,6 +8,7 @@ import { Progress } from '../../components/Progress';
 import { AboutMePage } from '../../components/signUpPage/AboutMePage';
 import { ChoosePassword } from '../../components/signUpPage/ChoosePassword';
 import { MentorMenteeOption } from '../../components/signUpPage/MentorMenteeOption';
+import { SignedIn } from '../../components/signUpPage/SignedIn';
 import { WelcomePage } from '../../components/signUpPage/WelcomePage';
 import { WrapperSignup } from '../../components/signUpPage/WrapperSignup';
 import styles from './style.module.css';
@@ -34,6 +35,8 @@ export const SignUp: React.FC<SignUpProps> = () => {
     password: '',
   });
   const [loading, setLoading] = React.useState(false);
+  const [onSuccessHeading, setOnSuccessHeading] = React.useState('');
+  const [success, setSuccess] = React.useState(true);
 
   const handelClick = (option: string) => {
     setOptionChosen(option);
@@ -68,6 +71,8 @@ export const SignUp: React.FC<SignUpProps> = () => {
     await instance.post(`/${optionChosen}/register/`, data).then((response) => {
       console.log(response);
       setLoading(false);
+      setSuccess(true);
+      setStep(4);
     });
   };
 
@@ -101,6 +106,10 @@ export const SignUp: React.FC<SignUpProps> = () => {
       component: (
         <ChoosePassword loading={loading} onNextClick={handelSignUp} />
       ),
+    },
+    4: {
+      heading: onSuccessHeading,
+      component: <SignedIn success={success} />,
     },
   };
 
