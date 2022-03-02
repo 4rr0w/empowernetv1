@@ -2,10 +2,11 @@
 /* eslint-disable no-unused-vars */
 import { Form, Typography } from 'antd';
 import FormItem from 'antd/lib/form/FormItem';
+import axios from 'axios';
 import React, { ReactNode, RefObject } from 'react';
 import { AccordionContext } from 'react-bootstrap';
 import { MdEmail, MdPassword } from 'react-icons/md';
-import instance from '../../client/axiomClient';
+import instance from '../../client/axiosClient';
 import { CustomButton } from '../../components/CustomButton';
 import { InputWithIcon } from '../../components/InputWithIcon';
 import { Progress } from '../../components/Progress';
@@ -32,13 +33,21 @@ export const SignIn: React.FC<SignInProps> = () => {
 
   const handelSignup = async () => {
     setLoading(true);
-    const data = { username: email, password: pass };
-
-    await instance.post('/signin/', data).then((response) => {
-      console.log(response);
-      setLoading(false);
-      setSuccess(true);
-    });
+    const formData = new FormData();
+    formData.append('email', email);
+    formData.append('password', pass);
+    await instance
+      .post('/user/signin/', formData)
+      .then((response) => {
+        console.log(response);
+        setLoading(false);
+        setSuccess(true);
+      })
+      .catch((e) => {
+        console.log(e);
+        setLoading(false);
+        setSuccess(false);
+      });
   };
 
   React.useEffect(() => {
