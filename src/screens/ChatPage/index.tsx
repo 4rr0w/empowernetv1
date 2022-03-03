@@ -6,6 +6,7 @@ import { Card } from 'antd';
 import styles from './style.module.css';
 import Group51950 from '../../assets/landingPage/Section6/Group 51950.png';
 import Maskgrp2 from '../../assets/landingPage/Section6/MaskGroup2.png';
+import { ChatPerson } from '../../components/ChatPerson';
 
 export interface ChatPageProps {
   align?: 'left' | 'right';
@@ -28,11 +29,27 @@ export const ChatPage: React.FC<ChatPageProps> = ({
     name: 'Alisher Abdulkhaev',
   },
 }) => {
+  const chatList: { [key: string]: string } = {
+    'Ola Fleming': 'id',
+    'Don Rodriguez': 'id',
+    'Lou Norton': 'id',
+    'Esther Moss': 'id',
+  };
+  const setActiveChat = (id: string) => {
+    console.log(id);
+  };
+
   return (
     <div className={styles.container}>
-      <span className={styles.name}>{data.name}</span>
-      <span className={styles.time}> {data.time} </span>
-      <p>{data.type === 'text' ? data.msg : <img src={data.image} />}</p>
+      <div className={styles.list}>
+        {Object.keys(chatList).map((person) => (
+          <ChatPerson
+            name={person}
+            onPress={() => setActiveChat(chatList[person])}
+          />
+        ))}
+      </div>
+      <div />
     </div>
   );
 };
