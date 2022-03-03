@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(60, 22, 127, 0.11) 0% 0% no-repeat padding-box;
+  border-radius: 0px 20px 20px 0px;
+  color: #ffffff;
+}
+
+.name {
+  text-align: left;
+  font: normal normal normal min(2.2vw, 20px) / min(3.3vw, 30px) Poppins;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.time {
+  text-align: left;
+  font: normal normal normal min(1.3vw, 13px) / min(2.2vw, 20px) Poppins;
+  letter-spacing: 0px;
+  opacity: 0.5;
+}
+
+.container > p {
+  text-align: left;
+  font: normal normal min(2vw, 18px) / min(3.1vw, 27px) Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}

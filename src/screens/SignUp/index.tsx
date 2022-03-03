@@ -33,7 +33,9 @@ export const SignUp: React.FC<SignUpProps> = () => {
     education: '',
     languages: '',
     password: '',
+    password2: '',
   });
+
   const [loading, setLoading] = React.useState(false);
   const [onSuccessHeading, setOnSuccessHeading] = React.useState('');
   const [success, setSuccess] = React.useState(true);
@@ -66,6 +68,7 @@ export const SignUp: React.FC<SignUpProps> = () => {
     setData((prevState) => ({
       ...prevState,
       password,
+      password2: password,
     }));
 
     const formData = new FormData();
