@@ -1,0 +1,49 @@
+.container {
+  height: 100vh;
+  padding: 10px;
+  background: #54348a 0% 0% no-repeat padding-box;
+  color: #fff;
+  opacity: 90%;
+  overflow: hidden;
+}
+
+.header {
+  margin-top: min(2vw, 10px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header > span {
+  font-size: min(3vw, 25px);
+}
+.icon {
+  font-size: min(3vw, 25px);
+  cursor: pointer;
+}
+
+.chatSection {
+  overflow-y: scroll;
+  max-height: 80%;
+  margin-top: min(2vw, 10px);
+  display: grid;
+  row-gap: min(2px, 1vw);
+  margin-bottom: min(3vw, 15px);
+  padding-right: min(2vw, 10px);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

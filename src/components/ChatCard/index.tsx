@@ -11,8 +11,8 @@ export interface ChatCardProps {
   align?: 'left' | 'right';
   data?: {
     time: string;
-    type: 'text' | 'image';
-    image: string;
+    type?: 'text' | 'image';
+    image?: string;
     msg: string;
     name: string;
   };
@@ -21,11 +21,7 @@ export interface ChatCardProps {
 export const ChatCard: React.FC<ChatCardProps> = ({
   align = 'left',
   data = {
-    time: '9 May, 10:30 AM',
     type: 'text',
-    image: '../../../assets/landingPage/Section6/MaskGroup2.png',
-    msg: 'Use Notebooks, Worksflows, and Deployments together or Independently. Use Notebooks, Worksflows, and Deployments together or Independently. Use Notebooks, Worksflows, and Deployments together or Independently.',
-    name: 'Alisher Abdulkhaev',
   },
 }) => {
   return (

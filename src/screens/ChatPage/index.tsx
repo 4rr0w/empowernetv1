@@ -49,7 +49,7 @@ export const ChatPage: React.FC<ChatPageProps> = ({
           />
         ))}
       </div>
-      <div />
+      <div className={styles.chatWindow}>hhhh</div>
     </div>
   );
 };
