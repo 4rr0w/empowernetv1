@@ -7,6 +7,7 @@ import styles from './style.module.css';
 import Group51950 from '../../assets/landingPage/Section6/Group 51950.png';
 import Maskgrp2 from '../../assets/landingPage/Section6/MaskGroup2.png';
 import { ChatPerson } from '../../components/ChatPerson';
+import { ChatWindow } from '../../components/ChatWindow';
 
 export interface ChatPageProps {
   align?: 'left' | 'right';
@@ -29,11 +30,12 @@ export const ChatPage: React.FC<ChatPageProps> = ({
     name: 'Alisher Abdulkhaev',
   },
 }) => {
+  const [activeId, setActiveId] = React.useState('id1');
   const chatList: { [key: string]: string } = {
-    'Ola Fleming': 'id',
-    'Don Rodriguez': 'id',
-    'Lou Norton': 'id',
-    'Esther Moss': 'id',
+    'Ola Fleming': 'id1',
+    'Don Rodriguez': 'id2',
+    'Lou Norton': 'id3',
+    'Esther Moss': 'id4',
   };
   const setActiveChat = (id: string) => {
     console.log(id);
@@ -44,12 +46,16 @@ export const ChatPage: React.FC<ChatPageProps> = ({
       <div className={styles.list}>
         {Object.keys(chatList).map((person) => (
           <ChatPerson
+            id={chatList[person]}
+            activeId={activeId}
             name={person}
             onPress={() => setActiveChat(chatList[person])}
           />
         ))}
       </div>
-      <div className={styles.chatWindow}>hhhh</div>
+      <div className={styles.chatWindow}>
+        <ChatWindow />
+      </div>
     </div>
   );
 };

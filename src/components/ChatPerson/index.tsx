@@ -11,18 +11,33 @@ import Group51950 from '../../assets/landingPage/Section6/Group 51950.png';
 import Maskgrp2 from '../../assets/landingPage/Section6/MaskGroup2.png';
 
 export interface ChatPersonProps {
+  activeId?: string;
   name?: string;
   onPress?: Function;
+  id?: string;
 }
 
 export const ChatPerson: React.FC<ChatPersonProps> = ({
+  activeId,
   name = 'Ola Fleming',
   onPress = () => {},
+  id,
 }) => {
   return (
     <div className={styles.container} onClick={() => onPress()}>
-      <MdChat className={styles.icon} />
-      <span>{name}</span>
+      <MdChat
+        className={styles.icon}
+        style={{
+          color: activeId === id ? '#FFD714' : '#fff',
+        }}
+      />
+      <span
+        style={{
+          color: activeId === id ? '#FFD714' : '#fff',
+        }}
+      >
+        {name}
+      </span>
     </div>
   );
 };
