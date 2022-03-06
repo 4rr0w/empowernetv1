@@ -3,7 +3,7 @@
 import { Form } from 'antd';
 import React, { ReactNode, RefObject } from 'react';
 import { AccordionContext } from 'react-bootstrap';
-import instance from '../../client/axiomClient';
+import instance from '../../client/axiosClient';
 import { Progress } from '../../components/Progress';
 import { AboutMePage } from '../../components/signUpPage/AboutMePage';
 import { ChoosePassword } from '../../components/signUpPage/ChoosePassword';
@@ -25,7 +25,7 @@ export const SignUp: React.FC<SignUpProps> = () => {
   const [optionChosen, setOptionChosen] = React.useState('');
   const welcomeRef = React.useRef(null);
   const aboutRef = React.useRef(null);
-  const [data, setData] = React.useState({
+  const [data, setData] = React.useState<{ [key: string]: string }>({
     email: '',
     first_name: '',
     last_name: '',
@@ -33,7 +33,9 @@ export const SignUp: React.FC<SignUpProps> = () => {
     education: '',
     languages: '',
     password: '',
+    password2: '',
   });
+
   const [loading, setLoading] = React.useState(false);
   const [onSuccessHeading, setOnSuccessHeading] = React.useState('');
   const [success, setSuccess] = React.useState(true);
@@ -66,14 +68,24 @@ export const SignUp: React.FC<SignUpProps> = () => {
     setData((prevState) => ({
       ...prevState,
       password,
+      password2: password,
     }));
 
-    await instance.post(`/${optionChosen}/register/`, data).then((response) => {
-      console.log(response);
-      setLoading(false);
-      setSuccess(true);
-      setStep(4);
-    });
+    const formData = new FormData();
+
+    Object.keys(data).map((key) => formData.append(key, data[key]));
+    await instance
+      .post(`/${optionChosen}/register/`, formData)
+      .then((response) => {
+        console.log(response);
+        setLoading(false);
+        setSuccess(true);
+      })
+      .catch((e) => {
+        console.log(e);
+        setLoading(false);
+        setSuccess(false);
+      });
   };
 
   const steps: {
