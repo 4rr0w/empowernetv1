@@ -13,6 +13,9 @@ export interface SearchMentorProps {
 export const SearchMentor: React.FC<SearchMentorProps> = ({
   getRef = () => null,
 }) => {
+  const [skills, setSkills] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
+
   const ref = React.useRef(null);
   React.useEffect(() => {
     getRef(ref);
@@ -24,6 +27,24 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
     Engineering: ['#F7DB42', '/path'],
     'Machine Learning': ['#EC9CAE', '/path'],
   };
+
+  const handelSearch = async () => {
+    setLoading(true);
+    formData.append('skills', skills);
+
+    await instance
+      .post('/user/signin/', skills)
+      .then((response) => {
+        console.log(response);
+        setLoading(false);
+       
+      })
+      .catch((e) => {
+        console.log(e);
+        setLoading(false);
+        
+      });
+  };
   return (
     <div className={styles.mainSec}>
       <div className={styles.containerbody}>
@@ -31,6 +52,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
           <div className={styles.container1}>
             <div className={styles.inputContainer}>
               <input
+                onChange={e => setSkills(e.target.value)}
                 className={styles.searchInput}
                 placeholder="Try “Mathematics“ or “Computer Science”"
               />
