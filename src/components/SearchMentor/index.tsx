@@ -33,7 +33,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
     formData.append('skills', skills);
 
     await instance
-      .post('/user/signin/', skills)
+      .post('/find_mentors/', skills)
       .then((response) => {
         console.log(response);
         setLoading(false);
