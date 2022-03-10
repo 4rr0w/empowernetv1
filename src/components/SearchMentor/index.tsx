@@ -185,7 +185,10 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
               </div>
             ))
           ) : (
-            <div>Search mentor</div>
+            <div>
+              <br />
+              Search mentor...
+            </div>
           )}
         </div>
       </div>
