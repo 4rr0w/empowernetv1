@@ -3,10 +3,12 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FilterFilled, SortAscendingOutlined } from '@ant-design/icons';
 import { MdSearch } from 'react-icons/md';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import styles from './style.module.css';
-import { CustomButton } from '../CustomButton';
-import { MentorCard } from '../MentorCard';
+import { CustomButton } from '../../components/CustomButton';
+import { MentorCard } from '../../components/MentorCard';
 import instance from '../../client/axiosClient';
+import { Header } from '../../components/Header';
 
 export interface SearchMentorProps {
   getRef?: Function;
@@ -15,7 +17,11 @@ export interface SearchMentorProps {
 export const SearchMentor: React.FC<SearchMentorProps> = ({
   getRef = () => null,
 }) => {
-  const [skills, setSkills] = React.useState('');
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchSkills = searchParams.get('skills');
+
+  const [skills, setSkills] = React.useState(searchSkills || '');
   const [loading, setLoading] = React.useState(false);
   const [mentors, setMentors] = React.useState<
     {
@@ -40,11 +46,15 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
   };
 
   const handelSearch = async () => {
+    navigate(`/search?skills=${skills}`);
+  };
+
+  React.useEffect(() => {
     setLoading(true);
     const formData = new FormData();
     formData.append('skills', skills);
 
-    await instance
+    instance
       .get(`/find_mentors?skills=${skills}`)
       .then((response) => {
         console.log(response.data);
@@ -55,9 +65,11 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
         console.log(e);
         setLoading(false);
       });
-  };
+  }, [searchSkills, skills]);
+
   return (
     <div className={styles.mainSec}>
+      <Header links={[]} />
       <div className={styles.containerbody}>
         <div className={styles.containertop}>
           <div className={styles.container1}>
@@ -88,13 +100,14 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
             <div className={styles.tags}>
               {Object.keys(tags).map((tag) => {
                 return (
-                  <CustomButton
-                    className={styles.tag}
-                    onClick={() => {}}
-                    size="middle"
-                    text={tag}
-                    gradient={[tags[tag][0], tags[tag][0]]}
-                  />
+                  <Link to={`/search?skills=${tag}`}>
+                    <CustomButton
+                      className={styles.tag}
+                      size="middle"
+                      text={tag}
+                      gradient={[tags[tag][0], tags[tag][0]]}
+                    />
+                  </Link>
                 );
               })}
             </div>
@@ -185,7 +198,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
               </div>
             ))
           ) : (
-            <div>
+            <div className={styles.searchAsk}>
               <br />
               Search mentor...
             </div>

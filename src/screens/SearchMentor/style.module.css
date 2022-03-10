@@ -3,7 +3,6 @@
   padding: 2%;
   overflow: hidden;
   min-height: 100vh;
-  color: #ffffff;
 }
 .containertop {
   display: flex;
@@ -95,6 +94,10 @@
 }
 .dropdowns {
   display: none;
+}
+
+.searchAsk {
+  color: #fff;
 }
 @media (max-width: 1140px) {
   .mentorlist {

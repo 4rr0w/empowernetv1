@@ -4,7 +4,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
-import { SearchMentor, SearchMentorProps } from '../components/SearchMentor';
+import { SearchMentor, SearchMentorProps } from '../screens/SearchMentor';
 
 export default {
   title: 'components/SearchMentor',

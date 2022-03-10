@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable indent */
@@ -42,7 +43,11 @@ export const Header: React.FC<HeaderProps> = ({
         ))}
       </div>
       <div className={styles.buttons}>
-        <CustomButton onClick={() => {}} size="middle" text="Sign In" />
+        <CustomButton
+          onClick={() => navigate('/signin')}
+          size="middle"
+          text="Sign In"
+        />
         <CustomButton
           isSecondary
           onClick={() => navigate('/signup')}
@@ -56,7 +61,12 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <div className={styles.headerContainer}>
       <div className={styles.header}>
-        <img className={styles.logo} src={logoFull} alt="" />
+        <img
+          className={styles.logo}
+          src={logoFull}
+          alt=""
+          onClick={() => navigate('/')}
+        />
 
         {width <= 900
           ? !showMenu && (

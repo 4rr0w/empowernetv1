@@ -3,6 +3,7 @@
 import { Form } from 'antd';
 import React, { ReactNode, RefObject } from 'react';
 import { AccordionContext } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import instance from '../../client/axiosClient';
 import { Progress } from '../../components/Progress';
 import { AboutMePage } from '../../components/signUpPage/AboutMePage';
@@ -16,6 +17,7 @@ import styles from './style.module.css';
 export interface SignUpProps {}
 
 export const SignUp: React.FC<SignUpProps> = () => {
+  const navigate = useNavigate();
   const scrollToDiv = (ref: any) => {
     if (ref && ref.current) ref.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -80,6 +82,7 @@ export const SignUp: React.FC<SignUpProps> = () => {
         console.log(response);
         setLoading(false);
         setSuccess(true);
+        setStep(4);
       })
       .catch((e) => {
         console.log(e);

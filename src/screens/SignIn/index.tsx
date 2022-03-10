@@ -6,6 +6,7 @@ import axios from 'axios';
 import React, { ReactNode, RefObject } from 'react';
 import { AccordionContext } from 'react-bootstrap';
 import { MdEmail, MdPassword } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 import instance from '../../client/axiosClient';
 import { CustomButton } from '../../components/CustomButton';
 import { InputWithIcon } from '../../components/InputWithIcon';
@@ -23,6 +24,7 @@ const { Text } = Typography;
 export interface SignInProps {}
 
 export const SignIn: React.FC<SignInProps> = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = React.useState(false);
   const [email, setEmail] = React.useState('');
   const [pass, setPass] = React.useState('');
@@ -42,6 +44,7 @@ export const SignIn: React.FC<SignInProps> = () => {
         console.log(response);
         setLoading(false);
         setSuccess(true);
+        navigate('search');
       })
       .catch((e) => {
         console.log(e);

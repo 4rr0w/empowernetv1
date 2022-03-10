@@ -46,7 +46,7 @@ export const MentorCard: React.FC<MentorCardProps> = ({
           <img className={styles.img} src={Maskgrp2} />
           <div className={styles.desc}>
             <p className={styles.first_name}>
-              {mentor.first_name}
+              {`${mentor.first_name} ${mentor.last_name}`}
               <div className={styles.stars}>
                 <StarFilled />
                 <StarFilled />
