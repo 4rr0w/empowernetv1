@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import {
@@ -16,24 +17,25 @@ import { CustomButton } from '../CustomButton';
 
 export interface MentorCardProps {
   mentor?: {
-    name: string;
-    education: string;
-    profession: string;
-    bio: string;
-    img_link: string;
-    skills: string[];
-    stars: number;
+    first_name: string;
+    last_name: string;
+    about: string;
+    photo: string;
+    education?: string;
+    profession?: string;
+    skills?: string[];
+    stars?: number;
   };
 }
 
 export const MentorCard: React.FC<MentorCardProps> = ({
   mentor = {
-    name: 'Fredia Gibbs',
+    first_name: 'Fredia Gibbs',
     education: 'Btech',
     profession: 'Product Manager',
     skills: ['Python', 'Cpp'],
-    bio: 'With a decade of product management experience in companies across Europe and the US, I am hoping to share my knowledge and support to other product people by creating a tailored coaching program according to needs and goals.',
-    img_link: '../../assets/landingPage/Section6/MaskGroup2.png',
+    about:
+      'With a decade of product management experience in companies across Europe and the US, I am hoping to share my knowledge and support to other product people by creating a tailored coaching program according to needs and goals.',
     stars: 4,
   },
 }) => {
@@ -43,8 +45,8 @@ export const MentorCard: React.FC<MentorCardProps> = ({
         <div className={styles.header}>
           <img className={styles.img} src={Maskgrp2} />
           <div className={styles.desc}>
-            <p className={styles.name}>
-              {mentor.name}
+            <p className={styles.first_name}>
+              {mentor.first_name}
               <div className={styles.stars}>
                 <StarFilled />
                 <StarFilled />
@@ -59,7 +61,7 @@ export const MentorCard: React.FC<MentorCardProps> = ({
         </div>
         <div className={styles.profile}>
           <div className={styles.tags}>
-            {mentor.skills.map((tag) => {
+            {/* {mentor.skills.map((tag) => {
               return (
                 <CustomButton
                   className={styles.tag}
@@ -68,9 +70,9 @@ export const MentorCard: React.FC<MentorCardProps> = ({
                   text={tag}
                 />
               );
-            })}
+            })} */}
           </div>
-          <p className={styles.bio}>{mentor.bio}</p>
+          <p className={styles.about}>{mentor.about}</p>
         </div>
       </div>
       <div className={styles.contact}>

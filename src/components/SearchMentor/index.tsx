@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FilterFilled, SortAscendingOutlined } from '@ant-design/icons';
@@ -5,6 +6,7 @@ import { MdSearch } from 'react-icons/md';
 import styles from './style.module.css';
 import { CustomButton } from '../CustomButton';
 import { MentorCard } from '../MentorCard';
+import instance from '../../client/axiosClient';
 
 export interface SearchMentorProps {
   getRef?: Function;
@@ -15,6 +17,15 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
 }) => {
   const [skills, setSkills] = React.useState('');
   const [loading, setLoading] = React.useState(false);
+  const [mentors, setMentors] = React.useState<
+    {
+      about: string;
+      first_name: string;
+      last_name: string;
+      photo: string;
+      email: string;
+    }[]
+  >();
 
   const ref = React.useRef(null);
   React.useEffect(() => {
@@ -30,19 +41,19 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
 
   const handelSearch = async () => {
     setLoading(true);
+    const formData = new FormData();
     formData.append('skills', skills);
 
     await instance
-      .post('/find_mentors/', skills)
+      .get(`/find_mentors?skills=${skills}`)
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
+        setMentors(response.data);
         setLoading(false);
-       
       })
       .catch((e) => {
         console.log(e);
         setLoading(false);
-        
       });
   };
   return (
@@ -52,14 +63,15 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
           <div className={styles.container1}>
             <div className={styles.inputContainer}>
               <input
-                onChange={e => setSkills(e.target.value)}
+                onChange={(e) => setSkills(e.target.value)}
                 className={styles.searchInput}
                 placeholder="Try “Mathematics“ or “Computer Science”"
               />
               <CustomButton
                 className={styles.findButton}
+                disabled={skills.trim() === ''}
                 iconRight
-                onClick={() => {}}
+                onClick={() => handelSearch()}
                 prefixIcon={
                   <MdSearch
                     style={{ marginLeft: '5px', fontSize: 'min(3vw, 34px)' }}
@@ -166,21 +178,15 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
           </div>
         </div>
         <div className={styles.mentorlist}>
-          <div className="my-2">
-            <MentorCard />
-          </div>
-          <div className="my-2">
-            <MentorCard />
-          </div>
-          <div className="my-2">
-            <MentorCard />
-          </div>
-          <div className="my-2">
-            <MentorCard />
-          </div>
-          <div className="my-2">
-            <MentorCard />
-          </div>
+          {mentors && skills ? (
+            mentors.map((mentor) => (
+              <div className="my-2">
+                <MentorCard mentor={mentor} />
+              </div>
+            ))
+          ) : (
+            <div>Search mentor</div>
+          )}
         </div>
       </div>
     </div>
