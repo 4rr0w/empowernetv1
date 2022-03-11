@@ -20,10 +20,10 @@ jobs:
         cache: 'npm'
     
     - name: Create env file
-        run: |
-          touch .env
-          echo REACT_APP_BACKEND_URL=${{ secrets.backend_url }} >> .env
-          cat .env
+      run: |
+        touch .env
+        echo REACT_APP_BACKEND_URL=${{ secrets.backend_url }} >> .env
+        cat .env
 
     - name: 🔨 Build Project
       run: |
