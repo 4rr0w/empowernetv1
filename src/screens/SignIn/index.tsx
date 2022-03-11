@@ -44,7 +44,7 @@ export const SignIn: React.FC<SignInProps> = () => {
         console.log(response);
         setLoading(false);
         setSuccess(true);
-        navigate('search');
+        navigate('/search');
       })
       .catch((e) => {
         console.log(e);
