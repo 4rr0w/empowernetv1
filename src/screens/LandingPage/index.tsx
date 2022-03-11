@@ -24,7 +24,17 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
     [key: string]: React.RefObject<null>;
   }>({});
 
-  const links: string[] = ['Find Mentor', 'Resources', 'About', 'Contact Us'];
+  const links: {
+    text: string;
+    onClick: Function;
+  }[] = [
+    { text: 'Find Mentor', onClick: () => {} },
+    { text: 'Resources', onClick: () => {} },
+    { text: 'About', onClick: () => {} },
+    { text: 'Internet Curation', onClick: () => {} },
+    { text: 'Forum', onClick: () => {} },
+    { text: 'Showcase', onClick: () => {} },
+  ];
 
   const handelHeaderClick = (linkKey: string) => {
     scrollToDiv(secRef[linkKey]);

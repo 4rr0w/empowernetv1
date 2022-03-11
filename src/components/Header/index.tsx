@@ -14,7 +14,10 @@ import useWindowDimensions from '../../hooks/viewport';
 import useOutsideAlerter from '../../hooks/detectOutsideClick';
 
 export interface HeaderProps {
-  links?: string[];
+  links?: {
+    text: string;
+    onClick: Function;
+  }[];
   handelClick?: Function;
 }
 
@@ -37,8 +40,8 @@ export const Header: React.FC<HeaderProps> = ({
     <div className={styles.container} ref={wrapperRef}>
       <div className={styles.headerLinks}>
         {links.map((item) => (
-          <div className={styles.link} onClick={() => handelClick(item)}>
-            {item}
+          <div className={styles.link} onClick={() => item.onClick}>
+            {item.text}
           </div>
         ))}
       </div>

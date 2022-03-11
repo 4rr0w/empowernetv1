@@ -20,6 +20,7 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
     country: '',
     education: '',
     languages: '',
+    degree: '',
   });
   const handelNext = () => {
     if (!error) onNextClick(data);
@@ -81,18 +82,32 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
         placeholder="Highest Education"
       />
       {mentor && (
-        <InputWithIcon
-          onChange={(e) =>
-            setData((prevState) => ({
-              ...prevState,
-              profession: e.target.value,
-            }))
-          }
-          className={styles.input}
-          icon={<MdWork style={{ fontSize: 'min(25px, 4vw)' }} />}
-          onFocusColor="rgba(255, 215, 20, 1)"
-          placeholder="Profession"
-        />
+        <>
+          <InputWithIcon
+            onChange={(e) =>
+              setData((prevState) => ({
+                ...prevState,
+                degree: e.target.value,
+              }))
+            }
+            className={styles.input}
+            icon={<MdWork style={{ fontSize: 'min(25px, 4vw)' }} />}
+            onFocusColor="rgba(255, 215, 20, 1)"
+            placeholder="Profession"
+          />
+          <InputWithIcon
+            onChange={(e) =>
+              setData((prevState) => ({
+                ...prevState,
+                profession: e.target.value,
+              }))
+            }
+            className={styles.input}
+            icon={<MdWork style={{ fontSize: 'min(25px, 4vw)' }} />}
+            onFocusColor="rgba(255, 215, 20, 1)"
+            placeholder="Profession"
+          />
+        </>
       )}
 
       <InputWithIcon
