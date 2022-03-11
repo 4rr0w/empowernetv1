@@ -30,6 +30,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
       last_name: string;
       photo: string;
       email: string;
+      skills: string[];
     }[]
   >();
 
@@ -112,7 +113,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
               })}
             </div>
           </div>
-          <div className={styles.selectcontainer}>
+          {/* <div className={styles.selectcontainer}>
             <div className={styles.container2}>
               <div className={styles.container3}>
                 <div>
@@ -155,7 +156,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
               <Dropdown.Toggle
                 id="dropdown-button-dark-example1"
                 variant="dark"
-                size="lg"
+                size="sm"
               >
                 Filter
               </Dropdown.Toggle>
@@ -174,7 +175,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
               <Dropdown.Toggle
                 id="dropdown-button-dark-example1"
                 variant="dark"
-                size="lg"
+                size="sm"
               >
                 Sort
               </Dropdown.Toggle>
@@ -189,6 +190,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
               </Dropdown.Menu>
             </Dropdown>
           </div>
+        </div> */}
         </div>
         <div className={styles.mentorlist}>
           {mentors && skills ? (

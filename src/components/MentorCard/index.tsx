@@ -23,7 +23,7 @@ export interface MentorCardProps {
     photo: string;
     education?: string;
     profession?: string;
-    skills?: string[];
+    skills: string[];
     stars?: number;
   };
 }
@@ -43,25 +43,25 @@ export const MentorCard: React.FC<MentorCardProps> = ({
     <div className={styles.mainSec}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <img className={styles.img} src={Maskgrp2} />
+          <img
+            className={styles.img}
+            src={`${process.env.REACT_APP_BACKEND_URL}/${mentor.photo}`}
+          />
           <div className={styles.desc}>
             <p className={styles.first_name}>
               {`${mentor.first_name} ${mentor.last_name}`}
               <div className={styles.stars}>
-                <StarFilled />
-                <StarFilled />
-                <StarFilled />
-                <StarFilled />
+                {[Array(Math.floor(mentor.stars || 0))].map((n) => (
+                  <StarFilled />
+                ))}
               </div>
             </p>
-            <p className={styles.text2}>
-              <b>Head of product</b>- Search & Find-ability at <b>ABD</b>
-            </p>
+            <p className={styles.text2}>{mentor.profession || ''}</p>
           </div>
         </div>
         <div className={styles.profile}>
           <div className={styles.tags}>
-            {/* {mentor.skills.map((tag) => {
+            {mentor.skills.map((tag) => {
               return (
                 <CustomButton
                   className={styles.tag}
@@ -70,7 +70,7 @@ export const MentorCard: React.FC<MentorCardProps> = ({
                   text={tag}
                 />
               );
-            })} */}
+            })}
           </div>
           <p className={styles.about}>{mentor.about}</p>
         </div>
