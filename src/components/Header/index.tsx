@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({
     <div className={styles.container} ref={wrapperRef}>
       <div className={styles.headerLinks}>
         {links.map((item) => (
-          <div className={styles.link} onClick={() => item.onClick}>
+          <div className={styles.link} onClick={() => item.onClick()}>
             {item.text}
           </div>
         ))}
