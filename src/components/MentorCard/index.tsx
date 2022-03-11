@@ -11,6 +11,7 @@ import {
   ShoppingFilled,
   FileAddFilled,
 } from '@ant-design/icons';
+import { Modal } from 'antd';
 import styles from './style.module.css';
 import Maskgrp2 from '../../assets/landingPage/Section6/MaskGroup2.png';
 import { CustomButton } from '../CustomButton';
@@ -39,8 +40,25 @@ export const MentorCard: React.FC<MentorCardProps> = ({
     stars: 4,
   },
 }) => {
+  const [visible, setVisible] = React.useState(false);
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleCancel = () => {
+    setVisible(false);
+  };
   return (
     <div className={styles.mainSec}>
+      <Modal
+        title="Basic Modal"
+        visible={visible}
+        onOk={handleCancel}
+        onCancel={handleCancel}
+      >
+        <p>Send your first message </p>
+        <textarea name="Text1" cols={40} rows={3} />
+      </Modal>
       <div className={styles.container}>
         <div className={styles.header}>
           <img
@@ -66,7 +84,7 @@ export const MentorCard: React.FC<MentorCardProps> = ({
                 <CustomButton
                   className={styles.tag}
                   onClick={() => {}}
-                  size="middle"
+                  size="small"
                   text={tag}
                 />
               );
@@ -75,7 +93,15 @@ export const MentorCard: React.FC<MentorCardProps> = ({
           <p className={styles.about}>{mentor.about}</p>
         </div>
       </div>
-      <div className={styles.contact}>
+      <CustomButton
+        style={{
+          width: 'fit-content',
+        }}
+        onClick={() => showModal()}
+        size="small"
+        text="connect"
+      />
+      {/* <div className={styles.contact}>
         <div>
           <HeartFilled className={styles.sideicon} />
           <p className={styles.texticon}> like</p>
@@ -105,7 +131,7 @@ export const MentorCard: React.FC<MentorCardProps> = ({
           <FileAddFilled className={styles.sideicon} />
           <p className={styles.texticon}>Resources</p>{' '}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

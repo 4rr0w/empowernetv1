@@ -57,6 +57,12 @@ export const Header: React.FC<HeaderProps> = ({
           size="large"
           text="Sign Up"
         />
+        <CustomButton
+          isSecondary
+          onClick={() => navigate('/dashboard')}
+          size="middle"
+          text="Try"
+        />
       </div>
     </div>
   );
