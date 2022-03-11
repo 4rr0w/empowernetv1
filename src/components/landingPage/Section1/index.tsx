@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdArrowRight, MdSearch } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 import styles from './style.module.css';
 import Group51957 from '../../../assets/landingPage/Section1/Group 51957.png';
 import Group51855 from '../../../assets/landingPage/Section1/Group 51855.png';
@@ -12,6 +13,7 @@ export interface Section1Props {
 
 export const Section1: React.FC<Section1Props> = ({ getRef = () => null }) => {
   const ref = React.useRef(null);
+  const navigate = useNavigate();
   React.useEffect(() => {
     getRef(ref);
   }, [ref]);
@@ -22,6 +24,8 @@ export const Section1: React.FC<Section1Props> = ({ getRef = () => null }) => {
     Engineering: ['#F7DB42', '/path'],
     'Machine Learning': ['#EC9CAE', '/path'],
   };
+
+  const [skills, setSkills] = React.useState('');
 
   return (
     <div className={styles.mainSec1} ref={ref}>
@@ -39,12 +43,14 @@ export const Section1: React.FC<Section1Props> = ({ getRef = () => null }) => {
         <div className={styles.inputContainer}>
           <input
             className={styles.searchInput}
+            onChange={(e) => setSkills(e.target.value)}
             placeholder="Try “Mathematics“ or “Computer Science”"
           />
           <CustomButton
             className={styles.findButton}
             iconRight
-            onClick={() => {}}
+            disabled={skills.trim() === ''}
+            onClick={() => navigate(`search?skills=${skills}`)}
             prefixIcon={
               <MdSearch
                 style={{ marginLeft: '5px', fontSize: 'min(3vw, 34px)' }}

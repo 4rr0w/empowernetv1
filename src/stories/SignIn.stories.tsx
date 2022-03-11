@@ -3,19 +3,14 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
-import {
-  MentorMenteeOption,
-  MentorMenteeOptionProps,
-} from '../screens/SignUp/MentorMenteeOption';
+import { SignIn, SignInProps } from '../screens/SignIn';
 
 export default {
-  title: 'components/MentorMenteeOptions',
-  component: MentorMenteeOption,
+  title: 'screens/SignIn',
+  component: SignIn,
 } as Meta;
 
-const Template: Story<MentorMenteeOptionProps> = (args) => (
-  <MentorMenteeOption {...args} />
-);
+const Template: Story<SignInProps> = (args) => <SignIn {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

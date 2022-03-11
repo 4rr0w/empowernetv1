@@ -3,14 +3,14 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import '../App.css';
-import { SignUp, SignUpProps } from '../screens/SignUp';
+import { ChatPage, ChatPageProps } from '../screens/ChatPage';
 
 export default {
-  title: 'screens/SignUP',
-  component: SignUp,
+  title: 'screens/ChatPage',
+  component: ChatPage,
 } as Meta;
 
-const Template: Story<SignUpProps> = (args) => <SignUp {...args} />;
+const Template: Story<ChatPageProps> = (args) => <ChatPage {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

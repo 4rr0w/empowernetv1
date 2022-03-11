@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  background: #5e3c99 0% 0% no-repeat padding-box;
+}
+
+.list {
+  width: max(250px, 30vw);
+}

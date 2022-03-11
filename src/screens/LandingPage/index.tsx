@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import { Section1 } from '../../components/landingPage/Section1';
 import { Section2 } from '../../components/landingPage/Section2';
@@ -16,6 +17,7 @@ export interface LandingPageProps {
 }
 
 export const LandingPage: React.FC<LandingPageProps> = () => {
+  const navigate = useNavigate();
   const scrollToDiv = (ref: any) => {
     if (ref && ref.current) ref.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -24,11 +26,37 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
     [key: string]: React.RefObject<null>;
   }>({});
 
-  const links: string[] = ['Find Mentor', 'Resources', 'About', 'Contact Us'];
-
   const handelHeaderClick = (linkKey: string) => {
     scrollToDiv(secRef[linkKey]);
   };
+
+  const links: {
+    text: string;
+    onClick: Function;
+  }[] = [
+    { text: 'Find Mentor', onClick: () => handelHeaderClick('Find Mentor') },
+    { text: 'Resources', onClick: () => handelHeaderClick('Resources') },
+    { text: 'About', onClick: () => handelHeaderClick('About') },
+    { text: 'Contact Us', onClick: () => handelHeaderClick('Contact Us') },
+    {
+      text: 'Internet Curation',
+      onClick: () => {
+        navigate('/internetcuration');
+      },
+    },
+    {
+      text: 'Forum',
+      onClick: () => {
+        navigate('/forum');
+      },
+    },
+    {
+      text: 'Showcase',
+      onClick: () => {
+        navigate('/showcase');
+      },
+    },
+  ];
 
   return (
     <div className={styles.landingContainer}>

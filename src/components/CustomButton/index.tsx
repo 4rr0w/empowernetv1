@@ -49,7 +49,6 @@ export const CustomButton: React.FC<ButtonProps> = ({
         backgroundImage: isSecondary
           ? 'linear-gradient(180deg, #323740, #13161A)'
           : `linear-gradient(180deg, ${gradient[0]},${gradient[1]})`,
-        height: size === 'middle' ? '36px' : '',
         borderRadius: round ? '8px' : '',
         ...style,
         ...iconRightStyle,

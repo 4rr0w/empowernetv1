@@ -1,0 +1,78 @@
+.container {
+  width: 100%;
+  padding-bottom: 20px;
+  min-height: 100vh;
+  background: rgba(107, 68, 186, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: min(10vw, 80px);
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: left;
+  height: max-content;
+}
+
+.heading {
+  width: 100%;
+  font-size: min(4vw, 50px);
+  margin-bottom: 2vw;
+}
+
+.para {
+  width: 100%;
+  font-size: min(1.7vw, 23px);
+  line-height: 1.34;
+  max-width: min(385px, 28vw);
+}
+
+.inputContainer {
+  margin-left: 2vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 45%;
+}
+
+.input {
+  height: 6vw;
+  max-height: 100px;
+  font-size: min(16px, 2vw);
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    padding-left: 5vw;
+    flex-direction: column;
+  }
+  .heading {
+    max-width: 60%;
+  }
+  .content {
+    height: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .para {
+    max-width: 60%;
+  }
+  .inputContainer {
+    margin: 0;
+    margin-top: 20px;
+    width: 60%;
+    transform: translate(0, 0);
+    justify-content: flex-start;
+  }
+  .input {
+    font-size: max(8px, 2.5vw);
+  }
+}

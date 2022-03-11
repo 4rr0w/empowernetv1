@@ -14,6 +14,7 @@
   outline: none !important;
   font-weight: 100 !important;
   background-color: transparent !important;
+  color: white;
 }
 
 .input:focus {

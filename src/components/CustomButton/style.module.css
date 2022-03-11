@@ -1,6 +1,6 @@
 .button {
   color: #fff9fc;
-  padding: 0.73vw 1.09vw;
+  padding: clamp(5px, 1em, 1vw);
   border-radius: 1.317vw;
   font-family: 'Poppins';
   border: none;
@@ -9,7 +9,8 @@
   align-items: center !important;
   justify-content: center;
   text-align: center;
-  font-size: min(2vw, 14px);
+  font-size: clamp(1vw, 1em, 8px);
+  height: fit-content;
 }
 
 .button:focus {

@@ -1,0 +1,135 @@
+.mainSec {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 29px 36px #7d8a9f21;
+  display: flex;
+  border: 0.824999988079071px solid #c9d1db1b;
+  border-radius: 16px;
+  padding: min(3.5vw, 20px);
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+  background-color: #ffffff;
+  color: black;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.name {
+  font-size: min(20px, 3vw);
+  color: #192646;
+  font-weight: bolder;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2vw;
+  margin: 0;
+}
+
+.desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 8vw;
+  height: 8vw;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 2vw;
+}
+
+.text2 {
+  font-size: min(16px, 2vw);
+  color: #192646;
+}
+
+.stars {
+  display: flex;
+  width: 1vw;
+  max-width: 14px;
+  height: auto;
+  color: #f2dc60;
+}
+
+.bio {
+  margin-top: 2vw;
+  max-width: 450px;
+  color: #8c919c;
+  text-align: left;
+  font: normal normal normal 1.2em Poppins;
+  font-size: min(3vw, 14px);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+.tags {
+  position: relative;
+  display: flex;
+  margin-top: min(30px, 2vw);
+}
+
+.tag {
+  position: relative;
+  margin-right: min(15px, 1vw);
+  border-radius: 1.317vw;
+  cursor: pointer;
+}
+
+.contact {
+  justify-self: end;
+  justify-self: right;
+  margin-left: min(2vw, 96px);
+  max-width: 80px;
+  padding: 2vw 0.5vw;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
+  background: #f0effc 0% 0% no-repeat padding-box;
+  text-align: center;
+  border-radius: min(3vw, 16px);
+}
+.texticon {
+  font-size: min(2.5vw, 8px);
+  color: #192646;
+  flex-wrap: wrap;
+}
+.sideicon {
+  font-size: min(20px, 2.5vw);
+  color: #9169db;
+}
+
+@media only screen and (min-width: 720px) {
+  .mainSec {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
+    flex-direction: row;
+    max-width: 100%;
+    width: fit-content;
+    padding: min(1vw, 5px);
+    margin-left: 0;
+    max-width: 500px;
+    justify-self: right;
+  }
+
+  .contact > div {
+    display: flex;
+    flex-direction: column;
+    margin: min(1vw, 5px) min(1.5vw, 10px);
+  }
+}
