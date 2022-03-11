@@ -34,10 +34,14 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
     text: string;
     onClick: Function;
   }[] = [
-    { text: 'Find Mentor', onClick: () => handelHeaderClick('Find Mentor') },
-    { text: 'Resources', onClick: () => handelHeaderClick('Resources') },
-    { text: 'About', onClick: () => handelHeaderClick('About') },
-    { text: 'Contact Us', onClick: () => handelHeaderClick('Contact Us') },
+    {
+      text: 'Find Mentor',
+      onClick: () => {
+        navigate('/search');
+      },
+    },
+    // { text: 'Resources', onClick: () => handelHeaderClick('Resources') },
+    // { text: 'Contact Us', onClick: () => handelHeaderClick('Contact Us') },
     {
       text: 'Internet Curation',
       onClick: () => {
@@ -45,7 +49,7 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
       },
     },
     {
-      text: 'Forum',
+      text: 'Community Forum',
       onClick: () => {
         navigate('/forum');
       },
@@ -56,6 +60,7 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
         navigate('/showcase');
       },
     },
+    { text: 'About Us', onClick: () => handelHeaderClick('About') },
   ];
 
   return (
@@ -74,7 +79,7 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
       />
       <Section4
         getRef={(r: any) =>
-          setSecRef((prevState) => ({ ...prevState, About: r }))
+          setSecRef((prevState) => ({ ...prevState, 'About Us': r }))
         }
       />
       <Section5 />
