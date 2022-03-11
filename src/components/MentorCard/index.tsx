@@ -51,13 +51,18 @@ export const MentorCard: React.FC<MentorCardProps> = ({
   return (
     <div className={styles.mainSec}>
       <Modal
-        title="Basic Modal"
+        title={`Connect to ${mentor.first_name}`}
         visible={visible}
         onOk={handleCancel}
         onCancel={handleCancel}
       >
         <p>Send your first message </p>
-        <textarea name="Text1" cols={40} rows={3} />
+        <textarea
+          name="EN"
+          cols={40}
+          rows={3}
+          placeholder="Enter your message.."
+        />
       </Modal>
       <div className={styles.container}>
         <div className={styles.header}>
