@@ -69,18 +69,7 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
         onFocusColor="rgba(255, 215, 20, 1)"
         placeholder="Country"
       />
-      <InputWithIcon
-        onChange={(e) =>
-          setData((prevState) => ({
-            ...prevState,
-            education: e.target.value,
-          }))
-        }
-        className={styles.input}
-        icon={<MdSchool style={{ fontSize: 'min(25px, 4vw)' }} />}
-        onFocusColor="rgba(255, 215, 20, 1)"
-        placeholder="Highest Education"
-      />
+
       {mentor && (
         <>
           <InputWithIcon
@@ -91,9 +80,9 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
               }))
             }
             className={styles.input}
-            icon={<MdWork style={{ fontSize: 'min(25px, 4vw)' }} />}
+            icon={<MdSchool style={{ fontSize: 'min(25px, 4vw)' }} />}
             onFocusColor="rgba(255, 215, 20, 1)"
-            placeholder="Profession"
+            placeholder="Degree"
           />
           <InputWithIcon
             onChange={(e) =>
@@ -109,6 +98,18 @@ export const AboutMePage: React.FC<AboutMePageProps> = ({
           />
         </>
       )}
+      <InputWithIcon
+        onChange={(e) =>
+          setData((prevState) => ({
+            ...prevState,
+            education: e.target.value,
+          }))
+        }
+        className={styles.input}
+        icon={<MdSchool style={{ fontSize: 'min(25px, 4vw)' }} />}
+        onFocusColor="rgba(255, 215, 20, 1)"
+        placeholder="Education Background"
+      />
 
       <InputWithIcon
         onChange={(e) =>
