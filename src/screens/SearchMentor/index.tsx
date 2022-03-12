@@ -87,7 +87,7 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
                 onClick={() => handelSearch()}
                 prefixIcon={
                   <MdSearch
-                    style={{ marginLeft: '5px', fontSize: 'min(3vw, 34px)' }}
+                    style={{ marginLeft: '5px', fontSize: 'min(2vw, 25px)' }}
                   />
                 }
                 size="middle"
