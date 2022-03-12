@@ -38,7 +38,6 @@ export const MentorCard: React.FC<MentorCardProps> = ({
     skills: ['Python', 'Cpp'],
     about:
       'With a decade of product management experience in companies across Europe and the US, I am hoping to share my knowledge and support to other product people by creating a tailored coaching program according to needs and goals.',
-    stars: 4,
   },
 }) => {
   const [visible, setVisible] = React.useState(false);
@@ -79,11 +78,13 @@ export const MentorCard: React.FC<MentorCardProps> = ({
               <br />
               <span className={styles.text2}>{mentor.profession || ''}</span>
             </span>
-            {/* <div className={styles.stars}>
-              {[Array(Math.floor(mentor.stars || 0))].map((n) => (
-                <StarFilled />
-              ))}
-            </div> */}
+            <div className={styles.stars}>
+              {[...Array(Math.floor(Math.random() * (5 - 3 + 1)) + 3)].map(
+                (n) => (
+                  <StarFilled />
+                )
+              )}
+            </div>
           </div>
         </div>
         <div className={styles.profile}>
