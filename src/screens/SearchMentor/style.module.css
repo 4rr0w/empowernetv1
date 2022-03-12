@@ -11,41 +11,43 @@
 
 .inputContainer {
   margin-top: 6vw;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
   position: relative;
   width: fit-content;
-  font-size: max(6px, min(1.53vw, 21px));
+  font-size: max(6px, min(1.2vw, 18px));
   height: max(4vw, 18px);
 }
 .searchInput {
   position: relative;
   border: none;
   outline: none;
-  padding: min(0.8vw, 10px);
+  padding: min(0.8vw, 5px) min(1.6vw, 10px);
   border-radius: 1.317vw;
-  height: max(4vw, 18px);
   width: 52.5vw;
+  max-height: 30px;
 }
 
 .findButton {
   position: absolute;
   right: 0;
-  height: max(4vw, 18px) !important;
-  padding: 1vw 1.2vw !important;
-  font-size: min(2vw, 24px);
+  max-height: 100%;
+  font-size: min(1.4vw, 14px);
   cursor: pointer;
+  max-height: 30px;
 }
 
 .tags {
   position: relative;
   display: flex;
-  margin-top: min(30px, 2vw);
+  margin-top: min(5px, 0.5vw);
 }
 
 .tag {
   position: relative;
   margin-right: min(15px, 1vw);
-  height: max(4vw, 18px) !important;
-  padding: 1vw 1.2vw !important;
+  padding: 0.6vw 1.2vw !important;
   font-size: min(1.6vw, 18px) !important;
   border-radius: 1.317vw;
   cursor: pointer;
