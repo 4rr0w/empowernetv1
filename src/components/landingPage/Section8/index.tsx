@@ -7,6 +7,7 @@ import {
   PhoneFilled,
   FacebookFilled,
   TwitterCircleFilled,
+  LinkedinFilled,
 } from '@ant-design/icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './style.module.css';
@@ -40,23 +41,23 @@ export const Section8: React.FC<Section8Props> = ({
           <div className={styles.sociallinks}>
             <div className={styles.icon1}>
               <MailFilled />
-              <p className={styles.text4}>info@empowernet.app</p>
+              <p className={styles.text4}>contact@empowernetmentoring.com</p>
             </div>
             <div className={styles.icon1}>
-              <PhoneFilled />
-              <p className={styles.text4}>+99 999 999 999</p>
+              <LinkedinFilled />
+              <p className={styles.text4}>Empowernet Organisation</p>
             </div>
             <div className={styles.icon1}>
               <InstagramOutlined />
-              <p className={styles.text4}>link</p>
+              <p className={styles.text4}>empowernet_mentorship</p>
             </div>
             <div className={styles.icon1}>
               <FacebookFilled />
-              <p className={styles.text4}>link</p>
+              <p className={styles.text4}>@empowernet_mentorship</p>
             </div>
             <div className={styles.icon1}>
               <TwitterCircleFilled />
-              <p className={styles.text4}>link</p>
+              <p className={styles.text4}>@empowernet_mentorship</p>
             </div>
           </div>
         </div>
@@ -64,7 +65,7 @@ export const Section8: React.FC<Section8Props> = ({
           <div className={styles.linkContainer}>
             <p className={styles.text2}>HOME</p>
             <p className={styles.text3}>Find Mentor</p>
-            <p className={styles.text3}>Quilk Talk</p>
+            <p className={styles.text3}>Quilk Chat</p>
           </div>
           <div className={styles.linkContainer}>
             <p className={styles.text2}>PLATFORM</p>
