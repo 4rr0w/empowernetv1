@@ -66,7 +66,11 @@ export const SearchMentor: React.FC<SearchMentorProps> = ({
         console.log(e);
         setLoading(false);
       });
-  }, [searchSkills, skills]);
+  }, [skills]);
+
+  React.useEffect(() => {
+    setSkills(searchSkills || '');
+  }, [searchSkills]);
 
   return (
     <div className={styles.mainSec}>
