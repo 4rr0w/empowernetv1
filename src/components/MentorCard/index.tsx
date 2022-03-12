@@ -26,6 +26,7 @@ export interface MentorCardProps {
     profession?: string;
     skills: string[];
     stars?: number;
+    university?: string;
   };
 }
 
@@ -71,15 +72,18 @@ export const MentorCard: React.FC<MentorCardProps> = ({
             src={`${process.env.REACT_APP_BACKEND_URL}/${mentor.photo}`}
           />
           <div className={styles.desc}>
-            <p className={styles.first_name}>
-              {`${mentor.first_name} ${mentor.last_name}`}
-              <div className={styles.stars}>
-                {[Array(Math.floor(mentor.stars || 0))].map((n) => (
-                  <StarFilled />
-                ))}
-              </div>
-            </p>
-            <p className={styles.text2}>{mentor.profession || ''}</p>
+            <span className={styles.first_name}>
+              {`${mentor.first_name} ${mentor.last_name} ${
+                mentor.university || ''
+              }`}
+              <br />
+              <span className={styles.text2}>{mentor.profession || ''}</span>
+            </span>
+            {/* <div className={styles.stars}>
+              {[Array(Math.floor(mentor.stars || 0))].map((n) => (
+                <StarFilled />
+              ))}
+            </div> */}
           </div>
         </div>
         <div className={styles.profile}>
@@ -95,12 +99,15 @@ export const MentorCard: React.FC<MentorCardProps> = ({
               );
             })}
           </div>
+          <br />
           <p className={styles.about}>{mentor.about}</p>
         </div>
       </div>
       <CustomButton
+        isSecondary
         style={{
           width: 'fit-content',
+          padding: '4px 8px',
         }}
         onClick={() => showModal()}
         size="small"
