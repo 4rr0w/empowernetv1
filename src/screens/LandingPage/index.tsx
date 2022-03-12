@@ -60,7 +60,7 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
         navigate('/showcase');
       },
     },
-    { text: 'About Us', onClick: () => handelHeaderClick('About') },
+    { text: 'About Us', onClick: () => handelHeaderClick('About Us') },
   ];
 
   return (
@@ -82,8 +82,8 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
           setSecRef((prevState) => ({ ...prevState, 'About Us': r }))
         }
       />
-      <Section5 />
-      <Section6 />
+      {/* <Section5 />
+      <Section6 /> */}
       <Section7 />
       <Section8
         getRef={(r: any) =>

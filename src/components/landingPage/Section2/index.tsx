@@ -19,8 +19,8 @@ export const Section2: React.FC<Section2Props> = ({ getRef = () => {} }) => {
     'SKILLS OF INTEREST',
     'PERSONALISED',
     'WORLD WIDE',
-    'YOUR LANGUAGE',
-    'YOUR LANGUAGE',
+    'BUILD A CARRER',
+    'SHOWCASE SKILLS',
   ];
   return (
     <div className={styles.mainSec2} ref={ref}>

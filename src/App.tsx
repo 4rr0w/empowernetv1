@@ -5,7 +5,10 @@ import './App.css';
 import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import A from './assets/landingPage/Section1/Group 51855.png';
+import Showcase from './assets/Showcase.png';
+import Dashboard from './assets/Dashboard.png';
+import Community from './assets/Community.png';
+import Internet from './assets/Internet Curation.png';
 import { LandingPage } from './screens/LandingPage';
 import { Spinner } from './components/Spinner';
 import { SignUp } from './screens/SignUp';
@@ -25,7 +28,13 @@ function App() {
   const wrapper = (image: string) => {
     return (
       <div>
-        <img src={image} />
+        <img
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+          src={image}
+        />
       </div>
     );
   };
@@ -37,10 +46,10 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/search" element={<SearchMentor />} />
-          <Route path="/forum" element={wrapper(A)} />
-          <Route path="/showcase" element={wrapper(A)} />
-          <Route path="/dashboard" element={wrapper(A)} />
-          <Route path="/internetcuration" element={wrapper(A)} />
+          <Route path="/forum" element={wrapper(Community)} />
+          <Route path="/showcase" element={wrapper(Showcase)} />
+          <Route path="/dashboard" element={wrapper(Dashboard)} />
+          <Route path="/internetcuration" element={wrapper(Internet)} />
         </Routes>
       </Suspense>
     </div>

@@ -63,32 +63,30 @@ export const Section8: React.FC<Section8Props> = ({
         <div className={styles.links}>
           <div className={styles.linkContainer}>
             <p className={styles.text2}>HOME</p>
-            <p className={styles.text3}>Footer Link</p>
-            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Find Mentor</p>
+            <p className={styles.text3}>Quilk Talk</p>
           </div>
           <div className={styles.linkContainer}>
             <p className={styles.text2}>PLATFORM</p>
-            <p className={styles.text3}>Footer Link</p>
-            <p className={styles.text3}>Footer Link</p>
-            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Internet Curation</p>
+            <p className={styles.text3}>Community Forum</p>
+            <p className={styles.text3}>Showcase</p>
           </div>
           <div className={styles.linkContainer}>
             <p className={styles.text2}>SERVICES</p>
-            <p className={styles.text3}>Footer Link</p>
-            <p className={styles.text3}>Footer Link</p>
-            <p className={styles.text3}>Footer Link</p>
-            <p className={styles.text3}>Footer Link</p>
-            <p className={styles.text3}>Footer Link</p>
+            <p className={styles.text3}>Contact Us</p>
+            <p className={styles.text3}>Podcast</p>
+            <p className={styles.text3}>Webinars</p>
           </div>
         </div>
       </div>
 
-      <div className={styles.copyright}>
+      {/* <div className={styles.copyright}>
         <p>
           &copy; 2021 Empowernet Mentoring. All rights reserved. Terms &
           Conditions | Policy
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
